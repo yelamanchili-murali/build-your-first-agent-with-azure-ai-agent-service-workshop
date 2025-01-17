@@ -176,9 +176,7 @@ Try these questions:
 
 ## Stop the Agent App
 
-When you're done, press <kbd>Shift</kbd>+<kbd>F5</kbd> or click the **Stop** button to stop the debugger.
-
-![Stop the debugger](./media/stop-debugger.png){:width="600"}
+When you're done, type **exit**, or press <kbd>Shift</kbd>+<kbd>F5</kbd> to stop the agent app.
 
 ### Disable the Breakpoint
 
