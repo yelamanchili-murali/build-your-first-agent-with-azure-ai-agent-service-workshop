@@ -1,4 +1,5 @@
 import os
+import asyncio
 from pathlib import Path
 
 from azure.ai.projects.aio import AIProjectClient
@@ -70,6 +71,9 @@ class Utilities:
         vector_store = await project_client.agents.create_vector_store_and_poll(
             file_ids=[file_info.id], name="vector_store"
         )
+
+        # add async sleep for 2 seconds        
+        await asyncio.sleep(2)
 
         self.log_msg_purple(f"Vector store created and uploaded file added to the store.")
         return vector_store
