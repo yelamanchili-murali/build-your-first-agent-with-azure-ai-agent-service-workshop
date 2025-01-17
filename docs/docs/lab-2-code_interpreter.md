@@ -73,10 +73,15 @@ Try these questions:
 
         The LLM orchestrates the following steps:
 
-        1. It generates an SQL query to answer the user's question.
-        2. It asks the application to call the **async_fetch_sales_data_using_sqlite_query** function, which retrieves the required data from the SQLite database and returns it to the LLM.
-        3. The LLM uses this data to generate Python code for creating a Pie Chart.
-        4. Finally, the Code Interpreter runs the Python code to generate the chart.
+        1. The LLM generates a SQL query to answer the user's question. In this example, the query is:
+
+            ```
+            SELECT region, SUM(revenue) AS total_revenue FROM sales_data GROUP BY region;
+            ```
+
+        2. The LLM asks the agent app to call the **async_fetch_sales_data_using_sqlite_query** function. The SQL command is executed, and the resulting data is returned to the LLM.
+        3. Using the returned data, the LLM writes Python code to create a Pie Chart.
+        4. Finally, the Code Interpreter executes the Python code to generate the chart.
 
 2. **Download the sales data**
 
