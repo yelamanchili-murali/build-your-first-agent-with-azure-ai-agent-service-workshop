@@ -150,14 +150,19 @@ Start asking questions about Contoso sales data. For example:
         | NORTH AMERICA  | $15,986,462    |
 
     !!! info
-        The LLM calls the `async_fetch_sales_data_using_sqlite_query` function to execute a dynamic SQL query on the SQLite database. You can see the LLM generated SQL query in the terminal output.
 
-        ```text
-        Function Call Tools: async_fetch_sales_data_using_sqlite_query
-        Executing query: SELECT region, SUM(revenue) AS total_revenue FROM sales_data GROUP BY region;
-        ```
+        So, what’s happening behind the scenes to make it all work?
 
-        The retrieved data is returned to the LLM, formatted as `Markdown` according to the specifications in the instruction file, and returned to the user.
+        The LLM orchestrates the following steps:
+
+        1. The LLM generates an SQL query to answer the user's question. For example, the following SQL query might be generated:
+
+            ```
+            SELECT region, SUM(revenue) AS total_revenue FROM sales_data GROUP BY region;
+            ```
+
+        2. The LLM then asks the application to call the **async_fetch_sales_data_using_sqlite_query** function, which retrieves the required data from the SQLite database and returns it to the LLM.
+        3. Using the retrieved data, the LLM generates a table in Markdown format and returns it to the user. If you check the instructions file, you'll notice that the default output format is Markdown.
 
 3. **Show the 4 most recent transactions**
 
