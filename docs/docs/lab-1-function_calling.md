@@ -83,7 +83,7 @@ In this lab, you'll enable the function logic to execute dynamic SQL queries aga
 Open the **instructions/instructions_function_calling.txt** file and review the **Tools** section for details on the function-calling instructions.
 
 !!! note
-    The {database_schema_string} placeholder is replaced in the instructions with the actual database schema when the application initializes.
+    The {database_schema_string} placeholder in the instructions is replaced with the actual database schema when the application initializes.
 
     ```python
     # Replace the placeholder with the database schema string
