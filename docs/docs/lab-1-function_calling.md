@@ -159,6 +159,9 @@ Start asking questions about Contoso sales data. For example:
 
         The retrieved data is returned to the LLM, formatted as `Markdown` according to the specifications in the instruction file, and returned to the user.
 
+3. **Show sales for europe**
+4. **Breakout sales by footwear**
+
 ### Debug the App
 
 Set a [breakpoint](https://code.visualstudio.com/Docs/editor/debugging){:target="_blank"} in the `async_fetch_sales_data_using_sqlite_query` function located in `sales_data.py` to observe how the LLM requests data.
