@@ -64,7 +64,7 @@ Review the **instructions/instructions_code_interpreter.txt** file. This file pr
 
 Try these questions:
 
-1. **Show sales by region as a pie chart**.
+1. **Show sales by region as a pie chart**
 
     Once the task is complete, the pie chart image will be saved in the **files** folder. Open the folder in VS Code and click on the image file to view it.
 
@@ -78,7 +78,7 @@ Try these questions:
     !!! info
         By default, the instructions specify that data downloads in CSV format. You can request other formats, such as JSON or Excel, by including the desired format in your query (e.g., ‘Download as JSON’).
 
-3. **Download as JSON**.
+3. **Download as JSON**
 
     Once the task is complete, check the **files** folder to see the downloaded file.
 
