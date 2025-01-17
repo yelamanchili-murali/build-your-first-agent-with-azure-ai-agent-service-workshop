@@ -128,7 +128,7 @@ The agent combines data from the Contoso sales database, the Tents Data Sheet, a
 3. **Show as a table the prices for competitor beginner tents**
 4. **Show as a bar chart**
 5. **What tents do we sell that are similar price to our competitors beginner tents?**
-6. **download the data**.
+6. **Download the data**
 
 ## Stop the Agent App
 
