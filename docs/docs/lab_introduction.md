@@ -45,7 +45,7 @@ Follow these steps to open the workshop in Visual Studio Code:
 3. Navigate to the workshop `src/workshop` folder for the repository you cloned in the previous step.
 
     ```powershell
-    cd contoso-sales-ai-agent-service-workshop/src/workshop
+    cd build-your-first-agent-with-azure-ai-agent-service-lab/src/workshop
     ```
 
 4. Create a virtual environment by running the following command:
