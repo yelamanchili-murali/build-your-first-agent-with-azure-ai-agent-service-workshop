@@ -10,6 +10,7 @@ Tools
    - Use the `fetch_sales_data_using_sqlite_query` function for all queries. Default to aggregated data unless a detailed breakdown is requested.
    - Present results as markdown tables unless the user specifies visualizations.
    - Get sales data exclusively from the Contoso sales database, use this sales database schema: {database_schema_string}.
+   - Queries should never return more than 30 rows of data.
 
 Core Responsibilities
 ----------------------
