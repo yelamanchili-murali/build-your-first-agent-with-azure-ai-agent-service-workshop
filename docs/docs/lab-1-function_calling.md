@@ -90,7 +90,7 @@ Open the **instructions/instructions_function_calling.txt** file and review the 
     instructions = instructions.replace("{database_schema_string}", database_schema_string)
     ```
 
-### Review the Function Logic
+<!-- ### Review the Function Logic
 
 Examine the **async_fetch_sales_data_using_sqlite_query** function in the **sales_data.py** file.
 
@@ -105,7 +105,7 @@ async def async_fetch_sales_data_using_sqlite_query(self: "SalesData", sqlite_qu
         :return: Return data in JSON serializable format.
         :rtype: str
         """
-```
+``` -->
 
 ### Run the Agent Application
 
@@ -122,16 +122,14 @@ Start asking questions about Contoso sales data. For example:
 
     Here is an example of the LLM response to the `help` query:
 
-    ```text
-    I’m here to help with your sales data inquiries at Contoso. Could you please provide more details about what you need assistance with? Here are some example queries you might consider:
+        I’m here to help with your sales data inquiries at Contoso. Could you please provide more details about what you need assistance with? Here are some example queries you might consider:
 
-    - "What were the sales by region?"
-    - "What was last quarter's revenue?"
-    - "Which products sell best in Europe?"
-    - "Total shipping costs by region?"
+        - "What were the sales by region?"
+        - "What was last quarter's revenue?"
+        - "Which products sell best in Europe?"
+        - "Total shipping costs by region?"
 
     Feel free to ask any specific questions related to Contoso sales data!
-    ```
 
     !!! info
         The LLM will provide a list of starter questions that were defined in the instructions file.
@@ -141,22 +139,18 @@ Start asking questions about Contoso sales data. For example:
 
     Here is an example of the LLM response to the `sales by region` query:
 
-    ```text
-    Here are the total sales by region for Contoso:
-
-    | Region         | Total Revenue  |
-    |----------------|----------------|
-    | AFRICA         | $5,227,467     |
-    | ASIA-PACIFIC   | $5,363,718     |
-    | CHINA          | $10,540,412    |
-    | EUROPE         | $9,990,708     |
-    | LATIN AMERICA  | $5,386,552     |
-    | MIDDLE EAST    | $5,312,519     |
-    | NORTH AMERICA  | $15,986,462    |
-    ```
+        | Region         | Total Revenue  |
+        |----------------|----------------|
+        | AFRICA         | $5,227,467     |
+        | ASIA-PACIFIC   | $5,363,718     |
+        | CHINA          | $10,540,412    |
+        | EUROPE         | $9,990,708     |
+        | LATIN AMERICA  | $5,386,552     |
+        | MIDDLE EAST    | $5,312,519     |
+        | NORTH AMERICA  | $15,986,462    |
 
     !!! info
-        The LLM calls the `async_fetch_sales_data_using_sqlite_query` function to execute a dynamic SQL query on the SQLite database. You can see the LLM generated SQL query in the terminal output. 
+        The LLM calls the `async_fetch_sales_data_using_sqlite_query` function to execute a dynamic SQL query on the SQLite database. You can see the LLM generated SQL query in the terminal output.
 
         ```text
         Function Call Tools: async_fetch_sales_data_using_sqlite_query
