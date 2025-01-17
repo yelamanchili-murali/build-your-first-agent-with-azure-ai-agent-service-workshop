@@ -36,37 +36,47 @@ Follow these steps to open the workshop in Visual Studio Code:
 
     ![](./media/windows-taskbar.png){ width="300" }
 
-2. From the terminal window, clone the workshop repo by running the following command:
+1. Open a terminal window and execute the following commands to clone the workshop repository, navigate to the relevant folder, set up a virtual environment, activate it, and install the required packages:
+
+    ```powershell
+    git clone https://github.com/gloveboxes/build-your-first-agent-with-azure-ai-agent-service-lab.git `
+    ; cd build-your-first-agent-with-azure-ai-agent-service-lab/src/workshop `
+    ; python -m venv .venv `
+    ; .\.venv\Scripts\activate `
+    ; pip install -r requirements.txt
+    ```
+
+<!-- 2. From the terminal window, clone the workshop repo by running the following command:
 
     ```powershell
     git clone https://github.com/gloveboxes/build-your-first-agent-with-azure-ai-agent-service-lab.git
     ```
 
-3. Navigate to the workshop `src/workshop` folder for the repository you cloned in the previous step.
+1. Navigate to the workshop `src/workshop` folder for the repository you cloned in the previous step.
 
     ```powershell
     cd build-your-first-agent-with-azure-ai-agent-service-lab/src/workshop
     ```
 
-4. Create a virtual environment by running the following command:
+2. Create a virtual environment by running the following command:
 
     ```powershell
     python -m venv .venv
     ```
 
-5. Activate the virtual environment by running the following command:
+3. Activate the virtual environment by running the following command:
 
     ```powershell
     .\.venv\Scripts\activate
     ```
 
-6. Install the required packages by running the following command:
+4. Install the required packages by running the following command:
 
     ```powershell
     pip install -r requirements.txt
-    ```
+    ``` -->
 
-7. Open in VS Code. From the terminal window, run the following command:
+5. Open in VS Code. From the terminal window, run the following command:
 
     ```powershell
     code .
