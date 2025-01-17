@@ -71,7 +71,7 @@ Try these questions:
     !!! info
         The LLM uses the **async_fetch_sales_data_using_sqlite_query** function to retrieve data from the SQLite database, generates Python code for a pie chart, and the Code Interpreter executes it to create the chart.
 
-2. **Download**
+2. **Download the sales data**
 
     Once the task is complete, check the **files** folder to see the downloaded file.
 
