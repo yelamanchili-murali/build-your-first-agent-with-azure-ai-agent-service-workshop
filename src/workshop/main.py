@@ -80,7 +80,7 @@ async def initialize() -> tuple[Agent, AgentThread]:
     database_schema_string = await sales_data.get_database_info()
 
     try:
-        with open(INSTRUCTIONS_FILE, "r") as file:
+        with open(INSTRUCTIONS_FILE, "r", encoding="utf-8", errors="ignore") as file:
             instructions = file.read()
 
         # Replace the placeholder with the database schema string
