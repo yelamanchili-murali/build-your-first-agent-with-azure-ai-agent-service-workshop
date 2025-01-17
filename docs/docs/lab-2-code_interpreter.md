@@ -68,14 +68,21 @@ Try these questions:
 
     Once the task is complete, the pie chart image will be saved in the **files** folder. Open the folder in VS Code and click on the image file to view it.
 
-    !!! info
-        The LLM uses the **async_fetch_sales_data_using_sqlite_query** function to retrieve data from the SQLite database, generates Python code for a pie chart, and the Code Interpreter executes it to create the chart.
+    !!! note
+        This might feel like magic, so what’s happening behind the scenes to make it all work?
+
+        The LLM orchestrates the following steps:
+
+        1. It generates an SQL query to answer the user's question.
+        2. It asks the application to call the **async_fetch_sales_data_using_sqlite_query** function, which retrieves the required data from the SQLite database and returns it to the LLM.
+        3. The LLM uses this data to generate Python code for creating a Pie Chart.
+        4. Finally, the Code Interpreter runs the Python code to generate the chart.
 
 2. **Download the sales data**
 
     Once the task is complete, check the **files** folder to see the downloaded file.
 
-    !!! info
+    !!! note
         By default, the instructions specify that data downloads in CSV format. You can request other formats, such as JSON or Excel, by including the desired format in your query (e.g., ‘Download as JSON’).
 
 3. **Download as JSON**

@@ -159,8 +159,12 @@ Start asking questions about Contoso sales data. For example:
 
         The retrieved data is returned to the LLM, formatted as `Markdown` according to the specifications in the instruction file, and returned to the user.
 
-3. **Show sales for europe**
-4. **Breakout sales by footwear**
+3. **Show the 4 most recent transactions**
+
+    !!! info "This query is valuable for learning purposes because it provides insight into the structure of the underlying Contoso sales database."
+
+4. **Show sales by category for europe**
+5. **Breakout sales by footwear**
 
 ### Debug the App
 
