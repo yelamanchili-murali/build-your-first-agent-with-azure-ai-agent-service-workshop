@@ -78,10 +78,8 @@ Log into [Azure AI Foundry](https://learn.microsoft.com/azure/ai-studio/what-is-
 
 1. Navigate to the [Azure AI Foundry](https://ai.azure.com){:target="_blank"} website.
 2. Select **Sign in** and use the **Username** and **Password** found in the top section of the **Resources** tab in the lab environment. Click on the **Username** and **Password** fields to automatically fill in the login details.
-3. Read the introduction to the Azure AI Foundry and click **Got it**.
-
     ![Azure credentials](./media/azure-credentials.png){:width="500"}
-
+3. Read the introduction to the Azure AI Foundry and click **Got it**.
 4. Select the project name that starts with **aip-**.
 
     ![Select project](./media/ai-foundry-project.png){:width="500"}
