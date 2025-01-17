@@ -62,30 +62,28 @@ Review the **instructions/instructions_code_interpreter.txt** file. This file pr
 
 ### Start a Conversation with the Agent
 
-1. Example Query:
+Try these questions:
 
-    **Show sales by region as a pie chart**.
+1. **Show sales by region as a pie chart**.
+
+      - After the task completes, the generated pie chart image will be saved in the **files** folder.
+      - Click on the image to view the pie chart in Visual Studio Code.
 
     !!! info
         The LLM uses the **async_fetch_sales_data_using_sqlite_query** function to retrieve data from the SQLite database, generates Python code for a pie chart, and the Code Interpreter executes it to create the chart.
 
-2. View the Generated Chart:
+2. **Download**
 
-   - After the task completes, the generated pie chart image will be saved in the **files** folder.
-   - Click on the image to view the pie chart in Visual Studio Code.
-
-3. Download Files:
-
-    Type **Download**
+    Check the **files** folder to see the downloaded files.
 
     !!! info
         By default, the instructions specify that data downloads in CSV format. You can request other formats, such as JSON or Excel, by including the desired format in your query (e.g., ‘Download as JSON’).
 
-    Try typing **Download as JSON**
+3. **Download as JSON**.
 
-4. Ask More Questions:
+    Check the **files** folder to see the downloaded files.
 
-    - Continue asking questions about Contoso sales data to see the Code Interpreter in action.
+4. Continue asking questions about Contoso sales data to see the Code Interpreter in action.
 
 ## Stop the Agent App
 

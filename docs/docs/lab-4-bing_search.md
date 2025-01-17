@@ -124,9 +124,9 @@ The **instructions/instructions_code_bing_grounding.txt** file provides guidance
 The agent combines data from the Contoso sales database, the Tents Data Sheet, and Bing Search to provide comprehensive responses, so the results will vary depending on the query.
 
 1. **What beginner tents do we sell?**
-2. **What tents do our competitors sell?**
-3. **At what price do our competitors sell beginner tents?**
-4. **What tents do we sell that are similar price to our competitors?**
+2. **What beginner tents do our competitors sell?**
+3. **At what price point do our competitors sell beginner tents?**
+4. **What tents do we sell that are similar price to our competitors beginner tents?**
 
 ## Stop the Agent App
 
