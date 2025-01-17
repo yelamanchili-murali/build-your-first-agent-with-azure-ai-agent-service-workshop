@@ -77,7 +77,7 @@ Follow these steps to open the workshop in Visual Studio Code:
 Log into [Azure AI Foundry](https://learn.microsoft.com/azure/ai-studio/what-is-ai-studio){:target="_blank"} to retrieve the **project connection string**, which the agent app uses to connect to the Azure AI Agents Service.
 
 1. Navigate to the [Azure AI Foundry](https://ai.azure.com){:target="_blank"} website.
-2. When prompted to log in, use the **Username** and **Password** found in the top section of the **Resources** tab in the lab environment. Click on the **Username** and **Password** fields to automatically fill in the login details.
+2. Select **Sign in** and use the **Username** and **Password** found in the top section of the **Resources** tab in the lab environment. Click on the **Username** and **Password** fields to automatically fill in the login details.
 3. Read the introduction to the Azure AI Foundry and click **Got it**.
 
     ![Azure credentials](./media/azure-credentials.png){:width="500"}
