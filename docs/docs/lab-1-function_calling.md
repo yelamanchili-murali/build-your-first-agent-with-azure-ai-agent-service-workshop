@@ -112,7 +112,7 @@ async def async_fetch_sales_data_using_sqlite_query(self: "SalesData", sqlite_qu
 1. Press <kbd>F5</kbd> to run the app.
 2. In the terminal, you'll see the app start, and the agent app will prompt you to enter your query.
 
-    ![Agent App](./media/run-the-agent.png){:width="500"}
+    ![Agent App](./media/run-the-agent.png){:width="600"}
 
 ### Start a Conversation with the Agent
 
@@ -163,7 +163,7 @@ Start asking questions about Contoso sales data. For example:
 
 Set a [breakpoint](https://code.visualstudio.com/Docs/editor/debugging){:target="_blank"} in the `async_fetch_sales_data_using_sqlite_query` function to see the LLM requesting data.
 
-![Breakpoint](./media/breakpoint.png){:width="500"}
+![Breakpoint](./media/breakpoint.png){:width="600"}
 
 ### Ask More Questions
 
@@ -178,7 +178,7 @@ Try these questions:
 
 When you're done, press <kbd>Shift</kbd>+<kbd>F5</kbd> or click the **Stop** button to stop the debugger.
 
-![Stop the debugger](./media/stop-debugger.png){:width="500"}
+![Stop the debugger](./media/stop-debugger.png){:width="600"}
 
 ### Disable the Breakpoint
 
