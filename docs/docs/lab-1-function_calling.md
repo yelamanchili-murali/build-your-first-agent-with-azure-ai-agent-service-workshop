@@ -161,7 +161,7 @@ Start asking questions about Contoso sales data. For example:
 
 ### Debug the App
 
-Set a [breakpoint](https://code.visualstudio.com/Docs/editor/debugging){:target="_blank"} in the `async_fetch_sales_data_using_sqlite_query` function to see the LLM requesting data.
+Set a [breakpoint](https://code.visualstudio.com/Docs/editor/debugging){:target="_blank"} in the `async_fetch_sales_data_using_sqlite_query` function located in `sales_data.py` to observe how the LLM requests data.
 
 ![Breakpoint](./media/breakpoint.png){:width="600"}
 
