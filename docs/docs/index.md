@@ -18,7 +18,7 @@ The Azure AI Agent Service is now in public preview, offering a single-agent clo
 
 The Azure AI Agent Service simplifies the creation of intelligent agents by offering built-in conversation state management and compatibility with various AI models. It provides a range of ready-to-use tools, including integrations with Fabric, SharePoint, Azure AI Search, and Azure Storage. The service also supports custom integrations through the Function Calling tool and enables RAG-style search capabilities with a built-in vector store for “file search” and semantic search features. Designed for scalability, it ensures smooth performance even under varying user loads.
 
-Learn more about the Azure AI Agent Service in the [Azure AI Agent Service documentation](https://learn.microsoft.com/azure/ai-services/agents/concepts/agents){:target="_blank"}. In particular, read about the [components of agents](https://learn.microsoft.com/azure/ai-services/agents/concepts/agents#agents-components){:target="_blank"}.
+Learn more about the Azure AI Agent Service in the [Azure AI Agent Service documentation](https://learn.microsoft.com/azure/ai-services/agents/overview){:target="_blank"}. In particular, read about the [components of agents](https://learn.microsoft.com/azure/ai-services/agents/concepts/agents#agents-components){:target="_blank"}.
 
 ## AI Agent Frameworks
 
