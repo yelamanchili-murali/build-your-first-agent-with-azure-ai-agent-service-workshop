@@ -15,7 +15,7 @@ Follow these steps to create a Grounding with Bing Search Resource:
 1. [Click to create a Grounding with Bing Search Resource](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/Microsoft.BingGroundingSearch){:target="_blank"}.
 
     !!! Note
-        You may need to sign in to your Azure account.
+        You may need to sign in to your Azure account and or clear the welcome screen to access the Azure portal.
 
 1. Select **Create**.
 1. Select the **rg-agent-workshop** resource group from the drop-down list.
@@ -34,7 +34,7 @@ Follow these steps to create a Grounding with Bing Search Resource:
 1. Copy the **Key 1** value to Notepad.
 1. Select the **Overview** from the side-bar menu.
 1. Select the **Go to Azure AI Foundry Portal** button.
-1. Select **Sign in** and enter your Azure account credentials.
+<!-- 1. Select **Sign in** and enter your Azure account credentials. -->
 
 ### Create a Bing Search Connection
 

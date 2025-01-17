@@ -71,7 +71,7 @@ The **instructions/instructions_file_search.txt** file provides guidance on how 
 
 The following conversation uses data from both the Contoso sales database and the uploaded Tents Data Sheet, so the results will vary depending on the query.
 
-1. **What beginner tents do we sell?**
+1. **Show as a table the beginner tents we sell?**
 
     Notice that the agent responds with relevant information from the Tents Data Sheet. Review the data sheet to understand why the agent selected those specific tents.
 
