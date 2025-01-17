@@ -129,7 +129,7 @@ Start asking questions about Contoso sales data. For example:
         - "Which products sell best in Europe?"
         - "Total shipping costs by region?"
 
-    Feel free to ask any specific questions related to Contoso sales data!
+        Feel free to ask any specific questions related to Contoso sales data!
 
     !!! info
         The LLM will provide a list of starter questions that were defined in the instructions file.
