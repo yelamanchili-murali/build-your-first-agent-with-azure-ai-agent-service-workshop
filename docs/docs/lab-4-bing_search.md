@@ -57,7 +57,6 @@ To create a Bing Search connection in the Azure AI Foundry portal, follow these 
     https://api.bing.microsoft.com/
     ```
 
-
 1. Set the connection name to **Grounding-with-Bing-Search**.
 1. Ensure the Access setting remains as **Shared to all projects**.
 
