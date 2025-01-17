@@ -31,9 +31,10 @@ class StreamEventHandler(AsyncAgentEventHandler[str]):
 
     async def on_thread_message(self, message: ThreadMessage) -> None:
         """Handle thread message events."""
-        if message.status == MessageStatus.COMPLETED:
-            print()
-        self.util.log_msg_purple(f"ThreadMessage created. ID: {message.id}, " f"Status: {message.status}")
+        pass
+        # if message.status == MessageStatus.COMPLETED:
+        #     print()
+        # self.util.log_msg_purple(f"ThreadMessage created. ID: {message.id}, " f"Status: {message.status}")
 
         await self.util.get_files(message, self.project_client)
 
@@ -45,9 +46,10 @@ class StreamEventHandler(AsyncAgentEventHandler[str]):
             print(f"Run failed. Error: {run.last_error}")
 
     async def on_run_step(self, step: RunStep) -> None:
-        if step.status == RunStepStatus.COMPLETED:
-            print()
-        self.util.log_msg_purple(f"RunStep type: {step.type}, Status: {step.status}")
+        pass
+        # if step.status == RunStepStatus.COMPLETED:
+        #     print()
+        # self.util.log_msg_purple(f"RunStep type: {step.type}, Status: {step.status}")
 
     async def on_run_step_delta(self, delta: RunStepDeltaChunk) -> None:
         pass
@@ -57,7 +59,8 @@ class StreamEventHandler(AsyncAgentEventHandler[str]):
 
     async def on_done(self) -> None:
         """Handle stream completion."""
-        self.util.log_msg_purple(f"\nStream completed.")
+        pass
+        # self.util.log_msg_purple(f"\nStream completed.")
 
     async def on_unhandled_event(self, event_type: str, event_data: Any) -> None:
         """Handle unhandled events."""

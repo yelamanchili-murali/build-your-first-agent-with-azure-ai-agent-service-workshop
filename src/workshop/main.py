@@ -148,6 +148,7 @@ async def main() -> None:
 
     while True:
         # Get user input prompt in the terminal using a pretty shade of green
+        print("\n")
         prompt = input(f"{tc.GREEN}Enter your query (type exit to finish): {tc.RESET}")
         if prompt.lower() == "exit":
             break
