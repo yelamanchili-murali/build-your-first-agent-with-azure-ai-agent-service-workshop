@@ -61,11 +61,11 @@ A [vector store](https://en.wikipedia.org/wiki/Vector_database){:target="_blank"
 
 The **instructions/instructions_file_search.txt** file provides guidance on how the LLM should use File Search for grounding purposes.
 
-### Run the Agent Application
+### Run the Agent App
 
 1. Review the **create_vector_store** function in the **utilities.py** file. The create_vector_store function uploads the Tents Data Sheet and saves it in a vector store. To observe the vector store creation process, set a [breakpoint](https://code.visualstudio.com/Docs/editor/debugging){:target="_blank"} in the function.
-2. Press <kbd>F5</kbd> to run the application.
-3. In the terminal, the application starts, and the agent app will prompt you to **Enter your query**.
+2. Press <kbd>F5</kbd> to run the app.
+3. In the terminal, the app starts, and the agent app will prompt you to **Enter your query**.
 
 ### Start a Conversation with the Agent
 

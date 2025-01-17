@@ -55,10 +55,10 @@ In this lab, you'll enable the Code Interpreter to execute Python code generated
 
 Review the **instructions/instructions_code_interpreter.txt** file. This file provides the LLM with specific instructions on how to utilize the Code Interpreter in the **Tools** section.
 
-### Run the Agent Application
+### Run the Agent App
 
-1. Press <kbd>F5</kbd> to run the application.
-2. In the terminal, the application will start, and the agent app will prompt you to  **Enter your query**.
+1. Press <kbd>F5</kbd> to run the app.
+2. In the terminal, the app will start, and the agent app will prompt you to  **Enter your query**.
 
 ### Start a Conversation with the Agent
 

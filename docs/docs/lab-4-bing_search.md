@@ -1,6 +1,6 @@
 ## Introduction
 
-Grounding conversations with Bing is one of several tools provided by the Azure AI Agent Service. Grounding with Bing allows your application to search for information relevant to the conversation. For example, you might want to search for competitive product information.
+Grounding conversations with Bing is one of several tools provided by the Azure AI Agent Service. Grounding with Bing allows your app to search for information relevant to the conversation. For example, you might want to search for competitive product information.
 
 ## Lab Exercise
 
@@ -62,7 +62,7 @@ To create a Bing Search connection in the Azure AI Foundry portal, follow these 
 
 For more information, visit the [Grounding with Bing Search](https://learn.microsoft.com/en-us/azure/ai-services/agents/how-to/tools/bing-grounding){:target="_blank"} documentation.
 
-### Enable Grounding with Bing Search in the Agent Application
+### Enable Grounding with Bing Search in the Agent App
 
 1. Open the `main.py`.
 
@@ -114,10 +114,10 @@ For more information, visit the [Grounding with Bing Search](https://learn.micro
 
 The **instructions/instructions_code_bing_grounding.txt** file provides guidance on how the LLM should use Bing search for grounding purposes. It ensures that queries remain relevant to Contoso and maintain a focus on contextually appropriate searches.
 
-### Run the Agent Application
+### Run the Agent App
 
-1. Press <kbd>F5</kbd> to run the application.
-2. In the terminal, the application starts, and the agent app will prompt you to **Enter your query**.
+1. Press <kbd>F5</kbd> to run the app.
+2. In the terminal, the app starts, and the agent app will prompt you to **Enter your query**.
 
 ### Start a Conversation with the Agent
 

@@ -24,7 +24,7 @@ This workshop demonstrates how to leverage the Azure AI Agent Service to create 
 
 ## 6. Security Best Practices
 
-- Security risks, such as SQL injection, are mitigated by enforcing read-only database access and running the application within a secure environment.
+- Security risks, such as SQL injection, are mitigated by enforcing read-only database access and running the app within a secure environment.
 
 ## 7. Multi-Language Support
 

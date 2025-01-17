@@ -2,7 +2,7 @@
 
 ### What is Function Calling
 
-Function calling enables Large Language Models (LLMs) to interact with external systems, execute tasks, and integrate with APIs. The LLM determines when to invoke a function based on user prompts and returns structured data for application use. Developers then implement the function logic within the application.
+Function calling enables Large Language Models (LLMs) to interact with external systems, execute tasks, and integrate with APIs. The LLM determines when to invoke a function based on user prompts and returns structured data for app use. Developers then implement the function logic within the app.
 
 In this workshop, the function logic is used to execute the LLM dynamically generated SQL queries against the SQLite database.
 
@@ -83,7 +83,7 @@ In this lab, you'll enable the function logic to execute dynamic SQL queries aga
 Open the **instructions/instructions_function_calling.txt** file and review the **Tools** section for details on the function-calling instructions.
 
 !!! note
-    The {database_schema_string} placeholder in the instructions is replaced with the actual database schema when the application initializes.
+    The {database_schema_string} placeholder in the instructions is replaced with the actual database schema when the app initializes.
 
     ```python
     # Replace the placeholder with the database schema string
@@ -107,12 +107,12 @@ async def async_fetch_sales_data_using_sqlite_query(self: "SalesData", sqlite_qu
         """
 ``` -->
 
-### Run the Agent Application
+### Run the Agent App
 
-1. Press <kbd>F5</kbd> to run the application.
-2. In the terminal, you'll see the application start, and the agent app will prompt you to enter your query.
+1. Press <kbd>F5</kbd> to run the app.
+2. In the terminal, you'll see the app start, and the agent app will prompt you to enter your query.
 
-    ![Agent Application](./media/run-the-agent.png){:width="500"}
+    ![Agent App](./media/run-the-agent.png){:width="500"}
 
 ### Start a Conversation with the Agent
 
@@ -159,7 +159,7 @@ Start asking questions about Contoso sales data. For example:
 
         The retrieved data is returned to the LLM, formatted as `Markdown` according to the specifications in the instruction file, and returned to the user.
 
-### Debug the Application
+### Debug the App
 
 Set a [breakpoint](https://code.visualstudio.com/Docs/editor/debugging){:target="_blank"} in the `async_fetch_sales_data_using_sqlite_query` function to see the LLM requesting data.
 
@@ -182,4 +182,4 @@ When you're done, press <kbd>Shift</kbd>+<kbd>F5</kbd> or click the **Stop** but
 
 ### Disable the Breakpoint
 
-Remember to disable the breakpoint before running the application again.
+Remember to disable the breakpoint before running the app again.
