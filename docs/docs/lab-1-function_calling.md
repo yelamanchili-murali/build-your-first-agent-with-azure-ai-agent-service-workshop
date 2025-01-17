@@ -171,7 +171,7 @@ Now that you’ve set a breakpoint, ask additional questions about Contoso sales
 
 Try these questions:
 
-1. **What countries have the highest sales?**
+1. **What regions have the highest sales?**
 2. **What were the sales of tents in the United States in April 2022?**
 
 ## Stop the Agent App
