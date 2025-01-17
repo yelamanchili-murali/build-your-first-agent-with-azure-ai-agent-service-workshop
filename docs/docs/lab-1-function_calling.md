@@ -131,7 +131,7 @@ Start asking questions about Contoso sales data. For example:
 
         Feel free to ask any specific questions related to Contoso sales data!
 
-    !!! info
+    !!! tip
         The LLM will provide a list of starter questions that were defined in the instructions file.
         Try asking help in your language, for example `help in Hindi` or `help in Italian`.
 
