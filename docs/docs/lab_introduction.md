@@ -80,12 +80,16 @@ Log into [Azure AI Foundry](https://learn.microsoft.com/azure/ai-studio/what-is-
 2. Select **Sign in** and use the **Username** and **Password** found in the top section of the **Resources** tab in the lab environment. Click on the **Username** and **Password** fields to automatically fill in the login details.
     ![Azure credentials](./media/azure-credentials.png){:width="500"}
 3. Read the introduction to the Azure AI Foundry and click **Got it**.
-4. Select the project name that starts with **aip-**.
+4. Ensure you are on the AI Foundry home page. Click the **AI Foundry** tab in the top left corner.
+
+    ![AI Foundry home page](./media/ai-foundry-home.png){:width="200"}
+
+5. Select the project name that starts with **aip-**.
 
     ![Select project](./media/ai-foundry-project.png){:width="500"}
 
-5. Review the introduction guide and click **Close**.
-6. Locate the **Project details** section, click the **Copy** icon to copy the **Project connection string**.
+6. Review the introduction guide and click **Close**.
+7. Locate the **Project details** section, click the **Copy** icon to copy the **Project connection string**.
 
     ![Copy connection string](./media/project-connection-string.png){:width="500"}
 
