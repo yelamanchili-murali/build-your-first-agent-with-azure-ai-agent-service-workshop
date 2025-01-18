@@ -65,7 +65,7 @@ class Utilities:
         file_info = await project_client.agents.upload_file(file_path=file_path, purpose="assistants")
 
         self.log_msg_purple(f"File uploaded: {file_path}")
-        self.log_msg_purple("Creating the vector store (This may take a few minutes)")
+        self.log_msg_purple("Creating the vector store")
 
         # Create a vector store
         vector_store = await project_client.agents.create_vector_store_and_poll(
