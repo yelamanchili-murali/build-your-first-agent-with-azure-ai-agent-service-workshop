@@ -131,6 +131,7 @@ async def post_message(thread_id: str, content: str, agent: Agent, thread: Agent
             max_completion_tokens=MAX_COMPLETION_TOKENS,
             max_prompt_tokens=MAX_PROMPT_TOKENS,
             temperature=TEMPERATURE,
+            instructions=agent.instructions,
         )
 
         async with stream as s:
