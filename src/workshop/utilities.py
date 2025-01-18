@@ -73,7 +73,7 @@ class Utilities:
         )
 
         # add async sleep for 2 seconds        
-        await asyncio.sleep(2)
+        # await asyncio.sleep(2)
 
         self.log_msg_purple(f"Vector store created and uploaded file added to the store.")
         return vector_store
