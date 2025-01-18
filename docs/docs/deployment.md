@@ -6,14 +6,14 @@ If you’re running this workshop on your own, you'll need to deploy the worksho
 
 1. An Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/){:target="_blank"} before you begin.
 2. Install the [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli){:target="_blank"}.
-3. Open a terminal window.
-4. Clone the workshop repo by running the following command:
+3. Install [Powershell (supported on Windows, macOS, and Linux)](https://learn.microsoft.com/powershell/scripting/install/installing-powershell){:target="_blank"}.
+4. Open a terminal window.
+5. Clone the workshop repo by running the following command:
 
     ```bash
     git clone https://github.com/gloveboxes/build-your-first-agent-with-azure-ai-agent-service-lab.git
     ```
 
-5. Install [Powershell (supported on Windows, macOS, and Linux)](https://learn.microsoft.com/powershell/scripting/install/installing-powershell){:target="_blank"}.
 6. Navigate to the workshop `infra` folder for the repository you cloned in the previous step.
 
     ```bash
