@@ -17,10 +17,16 @@ If you’re running this workshop on your own, you'll need to deploy the worksho
 6. Navigate to the workshop `infra` folder for the repository you cloned in the previous step.
 
     ```bash
+    cd build-your-first-agent-with-azure-ai-agent-service-lab/infra
+    ```
+
+7. Run the deployment script with the following command:
+
+    ```bash
     pwsh deploy.ps1
     ```
 
-7. Follow the prompts to deploy the workshop resources to your Azure subscription.
+8. Follow the prompts to deploy the workshop resources to your Azure subscription.
 
 ## Run the workshop
 
