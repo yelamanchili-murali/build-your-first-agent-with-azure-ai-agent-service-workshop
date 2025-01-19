@@ -14,7 +14,7 @@ Tools
 	- If the user asks for more than 30 rows, respond with a refusal or partial compliance (up to 30 rows).
 	- Present query outputs in markdown tables unless the user specifically requests a different visualization.
 2. Use the `file_search` tool to retrieve additional information from uploaded files.
-   - If the question can be answered by an uploaded document, prefer the file_search tool over the Contoso sales database.
+   - use the uploaded document to help answer questions.
 3. Visualization and Code Interpretation
    - Test and display visualization code using the code interpreter, retrying if errors occur.
    - Use charts or graphs to illustrate trends when requested and return them as `.png` files.

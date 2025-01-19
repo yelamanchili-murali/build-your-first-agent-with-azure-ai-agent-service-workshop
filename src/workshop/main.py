@@ -45,30 +45,30 @@ functions = AsyncFunctionTool(
 )
 
 # INSTRUCTIONS_FILE = "instructions/instructions_function_calling.txt"
-# INSTRUCTIONS_FILE = "instructions/instructions_code_interpreter.txt"
-# INSTRUCTIONS_FILE = "instructions/instructions_file_search.txt"
-# INSTRUCTIONS_FILE = "instructions/instructions_code_bing_grounding.txt"
+INSTRUCTIONS_FILE = "instructions/instructions_code_interpreter.txt"
+INSTRUCTIONS_FILE = "instructions/instructions_file_search.txt"
+INSTRUCTIONS_FILE = "instructions/instructions_code_bing_grounding.txt"
 
 
 async def add_agent_tools():
     """Add tools for the agent."""
     
     # Add the functions tool
-    # toolset.add(functions)
+    toolset.add(functions)
 
     # Add the code interpreter tool
-    # code_interpreter = CodeInterpreterTool()
-    # toolset.add(code_interpreter)
+    code_interpreter = CodeInterpreterTool()
+    toolset.add(code_interpreter)
 
     # Add the file search tool
-    # vector_store = await utilities.create_vector_store(project_client, DATA_SHEET_FILE)
-    # file_search_tool = FileSearchTool(vector_store_ids=[vector_store.id])
-    # toolset.add(file_search_tool)
+    vector_store = await utilities.create_vector_store(project_client, DATA_SHEET_FILE)
+    file_search_tool = FileSearchTool(vector_store_ids=[vector_store.id])
+    toolset.add(file_search_tool)
 
     # Add the Bing grounding tool
-    # bing_connection = await project_client.connections.get(connection_name=BING_CONNECTION_NAME)
-    # bing_grounding = BingGroundingTool(connection_id=bing_connection.id)
-    # toolset.add(bing_grounding)
+    bing_connection = await project_client.connections.get(connection_name=BING_CONNECTION_NAME)
+    bing_grounding = BingGroundingTool(connection_id=bing_connection.id)
+    toolset.add(bing_grounding)
 
 
 async def initialize() -> tuple[Agent, AgentThread]:
