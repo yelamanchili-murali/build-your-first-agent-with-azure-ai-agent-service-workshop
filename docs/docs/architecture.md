@@ -13,7 +13,7 @@ The workshop solution is highly adaptable to various scenarios, such as customer
 ### Best Practices Demonstrated in the App
 
 - **Asynchronous APIs**:  
-  The workshop sample uses asynchronous APIs for both the Azure AI Agent Service and SQLite, ensuring efficient resource utilization and improved scalability. This approach is especially valuable when deploying the app in a production environment with asynchronous web frameworks such as FastAPI, Chainlit, or Streamlit.
+  In the workshop sample, both the Azure AI Agent Service and SQLite use asynchronous APIs, optimizing resource efficiency and scalability. This design choice becomes especially advantageous when deploying the application with asynchronous web frameworks like FastAPI, Chainlit, or Streamlit.
 
 - **Token Streaming**:  
   Token streaming is implemented to improve user experience by reducing perceived response times for the LLM-powered agent app.
