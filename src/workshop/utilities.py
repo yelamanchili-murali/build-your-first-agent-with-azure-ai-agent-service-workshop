@@ -22,7 +22,7 @@ class Utilities:
         print(f"{tc.BLUE}{msg}{tc.RESET}", end="", flush=True)
 
     async def get_file(self, project_client: AIProjectClient, file_id: str, attachment_name: str) -> None:
-        """Retrieve the image file and save it to the local disk."""
+        """Retrieve the file and save it to the local disk."""
         self.log_msg_green(f"Getting file with ID: {file_id}")
 
         file_name, file_extension = os.path.splitext(os.path.basename(attachment_name.split(":")[-1]))
@@ -38,7 +38,7 @@ class Utilities:
             async for chunk in await project_client.agents.get_file_content(file_id):
                 file.write(chunk)
 
-        self.log_msg_green(f"Image file saved to {file_path}")
+        self.log_msg_green(f"File saved to {file_path}")
         # Cleanup the remote file
         await project_client.agents.delete_file(file_id)
 
