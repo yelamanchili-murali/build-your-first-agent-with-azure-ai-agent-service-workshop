@@ -4,7 +4,7 @@ Grounding a conversation with documents is highly effective, especially for retr
 
 In this lab, you'll learn how to enable the document search and upload the Tents Data Sheet to a vector store for the agent. Once activated, the tool allows the agent to search the file and deliver relevant responses. Documents can be uploaded to the agent for all users or linked to a specific user thread, or linked to the Code Interpreter. When the app starts, a vector store is created, the Contoso tents datasheet is added, and it is made available to the agent.
 
-Normally, you wouldn’t create a new vector store and upload documents each time the app starts. Instead, you’d create the vector store once, upload the documents, and connect it to the agent. In this lab, we recreate the vector store on each startup to demonstrate the process.
+Normally, you wouldn’t create a new vector store and upload documents each time the app starts. Instead, you’d create the vector store once, upload potentially thousands of documents, and connect the store to the agent. For this lab, we recreate the vector store on each startup to demonstrate the process.
 
 A [vector store](https://en.wikipedia.org/wiki/Vector_database){:target="_blank"} is a database optimized for storing and searching vectors (numeric representations of text data). The File Search tool uses the vector store for [semantic search](https://en.wikipedia.org/wiki/Semantic_search){:target="_blank"} to search for relevant information in the uploaded document.
 
