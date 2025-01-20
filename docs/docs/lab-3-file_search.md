@@ -1,8 +1,8 @@
 ## Introduction
 
-Using file-based information to ground a conversation is highly effective, especially for finding details about a product or service stored in a document. The Azure AI Agent Service includes a [File Search tool](https://learn.microsoft.com/en-us/azure/ai-services/agents/how-to/tools/file-search){:target="_blank"} that enables agents to retrieve information directly from uploaded files, such as user-supplied documents or product data.
+Grounding a conversation with documents is highly effective, especially for retrieving product details that may not be available in an operational database. The Azure AI Agent Service includes a [File Search tool](https://learn.microsoft.com/en-us/azure/ai-services/agents/how-to/tools/file-search){:target="_blank"} that enables agents to retrieve information directly from uploaded files, such as user-supplied documents or product data.
 
-In this lab, you'll learn how to enable the File Search tool and upload the Tents Data Sheet to a vector store for the agent. Once activated, the tool allows the agent to search the file and deliver relevant responses. Documents can be uploaded to the agent for all users or linked to a specific user thread. This lab will focus on uploading a document directly to the agent.
+In this lab, you'll learn how to enable the document search and upload the Tents Data Sheet to a vector store for the agent. Once activated, the tool allows the agent to search the file and deliver relevant responses. Documents can be uploaded to the agent for all users or linked to a specific user thread, or linked to the Code Interpreter. When the app starts, a vector store is created, the Contoso tents datasheet is added, and it is made available to the agent.
 
 A [vector store](https://en.wikipedia.org/wiki/Vector_database){:target="_blank"} is a database optimized for storing and searching vectors (numeric representations of text data). The File Search tool uses the vector store for [semantic search](https://en.wikipedia.org/wiki/Semantic_search){:target="_blank"} to search for relevant information in the uploaded document.
 
@@ -17,7 +17,11 @@ A [vector store](https://en.wikipedia.org/wiki/Vector_database){:target="_blank"
 
     ```python
     # INSTRUCTIONS_FILE = "instructions/instructions_file_search.txt"
-    # vector_store = await utilities.create_vector_store(project_client, DATA_SHEET_FILE)
+    # vector_store = await utilities.create_vector_store(
+    #     project_client,
+    #     files=[TENTS_DATA_SHEET_FILE],
+    #     vector_name_name="Contoso Product Information Vector Store",
+    # )
     # file_search_tool = FileSearchTool(vector_store_ids=[vector_store.id])
     # toolset.add(file_search_tool)
     ```
@@ -46,8 +50,12 @@ A [vector store](https://en.wikipedia.org/wiki/Vector_database){:target="_blank"
         code_interpreter = CodeInterpreterTool()
         toolset.add(code_interpreter)
 
-        # Add the file search tool
-        vector_store = await utilities.create_vector_store(project_client, DATA_SHEET_FILE)
+        # Add the tents data sheet to a new vector data store
+        vector_store = await utilities.create_vector_store(
+            project_client,
+            files=[TENTS_DATA_SHEET_FILE],
+            vector_name_name="Contoso Product Information Vector Store",
+        )
         file_search_tool = FileSearchTool(vector_store_ids=[vector_store.id])
         toolset.add(file_search_tool)
 
@@ -71,11 +79,24 @@ The **instructions/instructions_file_search.txt** file provides guidance on how 
 
 The following conversation uses data from both the Contoso sales database and the uploaded Tents Data Sheet, so the results will vary depending on the query.
 
-1. **Show as a table the beginner tents we sell?**
+1. **What brands of tents do we sell?**
 
-    Notice that the agent responds with relevant information from the Tents Data Sheet. Review the data sheet to understand why the agent selected those specific tents.
+    The agent responds with a list of tent brands from the Tents Data Sheet.
 
-2. **What were the sales of beginner tents in 2024 by region?**
+    !!! note
+        In the first lab, you may have noticed that the transaction history did not include tent brands or descriptions. This is because the underlying database schema does not store brand or description data. However, if you check the tents data sheet, you’ll find that this information is included. The agent can now reference the data sheet to access details such as brand, description, product type, and category, and relate this data back to the Contoso sales database.
+
+2. **What product type and categories are these brands associated with?**
+
+    The agent provides a list of product types and categories associated with the tent brands.
+
+3. **What were the sales of alpine gear in 2024 by region?**
+
+    The agent responds with sales data from the Contoso sales database.
+
+4. **Show as a table and include the brand names**
+
+    The agent responds with a table of sales data from the Contoso sales database, including the brand names.
 
 ## Stop the Agent App
 
