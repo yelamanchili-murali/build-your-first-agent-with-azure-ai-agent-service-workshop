@@ -21,7 +21,7 @@ from utilities import Utilities
 logging.basicConfig(level=logging.ERROR)
 logger = logging.getLogger(__name__)
 
-DATA_SHEET_FILE = "datasheet/contoso-tents-datasheet.pdf"
+TENTS_DATA_SHEET_FILE = "datasheet/contoso-tents-datasheet.pdf"
 API_DEPLOYMENT_NAME = os.getenv("MODEL_DEPLOYMENT_NAME")
 PROJECT_CONNECTION_STRING = os.environ["PROJECT_CONNECTION_STRING"]
 BING_CONNECTION_NAME = os.getenv("BING_CONNECTION_NAME")
@@ -52,7 +52,7 @@ functions = AsyncFunctionTool(
 
 async def add_agent_tools():
     """Add tools for the agent."""
-    
+
     # Add the functions tool
     # toolset.add(functions)
 
@@ -60,8 +60,12 @@ async def add_agent_tools():
     # code_interpreter = CodeInterpreterTool()
     # toolset.add(code_interpreter)
 
-    # Add the file search tool
-    # vector_store = await utilities.create_vector_store(project_client, DATA_SHEET_FILE)
+    # Add the tents data sheet to a new vector data store
+    # vector_store = await utilities.create_vector_store(
+    #     project_client,
+    #     files=[TENTS_DATA_SHEET_FILE],
+    #     vector_name_name="Contoso Product Information Vector Store",
+    # )
     # file_search_tool = FileSearchTool(vector_store_ids=[vector_store.id])
     # toolset.add(file_search_tool)
 

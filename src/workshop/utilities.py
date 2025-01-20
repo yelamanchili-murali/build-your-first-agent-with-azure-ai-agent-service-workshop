@@ -25,7 +25,8 @@ class Utilities:
         """Retrieve the file and save it to the local disk."""
         self.log_msg_green(f"Getting file with ID: {file_id}")
 
-        file_name, file_extension = os.path.splitext(os.path.basename(attachment_name.split(":")[-1]))
+        file_name, file_extension = os.path.splitext(
+            os.path.basename(attachment_name.split(":")[-1]))
         file_name = f"{file_name}.{file_id}{file_extension}"
 
         folder_path = Path("files")
@@ -47,33 +48,36 @@ class Utilities:
         if message.image_contents:
             for index, image in enumerate(message.image_contents, start=0):
                 attachment_name = (
-                    "unknown" if not message.file_path_annotations else message.file_path_annotations[index].text
+                    "unknown" if not message.file_path_annotations else message.file_path_annotations[
+                        index].text
                 )
                 await self.get_file(project_client, image.image_file.file_id, attachment_name)
         elif message.attachments:
             for index, attachment in enumerate(message.attachments, start=0):
                 attachment_name = (
-                    "unknown" if not message.file_path_annotations else message.file_path_annotations[index].text
+                    "unknown" if not message.file_path_annotations else message.file_path_annotations[
+                        index].text
                 )
                 await self.get_file(project_client, attachment.file_id, attachment_name)
 
-    async def create_vector_store(self, project_client: AIProjectClient, file_path: str) -> None:
+    async def create_vector_store(self, project_client: AIProjectClient, files: list[str], vector_name_name: str) -> None:
         """Upload a file to the project."""
-        self.log_msg_purple(f"Uploading file: {file_path}")
 
-        # Upload the file
-        file_info = await project_client.agents.upload_file(file_path=file_path, purpose="assistants")
+        file_ids = []
 
-        self.log_msg_purple(f"File uploaded: {file_path}")
+        # Upload the files
+        for file_path in files:
+            self.log_msg_purple(f"Uploading file: {file_path}")
+            file_info = await project_client.agents.upload_file(file_path=file_path, purpose="assistants")
+            file_ids.append(file_info.id)
+
         self.log_msg_purple("Creating the vector store")
 
         # Create a vector store
         vector_store = await project_client.agents.create_vector_store_and_poll(
-            file_ids=[file_info.id], name="vector_store"
+            file_ids=file_ids, name=vector_name_name
         )
 
-        # add async sleep for 2 seconds        
-        # await asyncio.sleep(2)
-
-        self.log_msg_purple(f"Vector store created and uploaded file added to the store.")
+        self.log_msg_purple(
+            f"Vector store created and files added.")
         return vector_store
