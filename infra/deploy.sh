@@ -12,6 +12,9 @@ STORAGE_NAME="agentservicestorage"
 AI_SERVICES_NAME="agent-workshop"
 MODEL_CAPACITY=140
 
+# Register the Bing Search resource provider
+az provider register --namespace 'Microsoft.Bing'
+
 # Create the resource group
 az group create --name "$RG_NAME" --location "$RG_LOCATION"
 
