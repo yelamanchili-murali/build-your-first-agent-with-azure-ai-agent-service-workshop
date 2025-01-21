@@ -13,6 +13,7 @@ from azure.ai.projects.models import (
     FileSearchTool,
 )
 from azure.identity import DefaultAzureCredential
+from dotenv import load_dotenv
 from sales_data import SalesData
 from stream_event_handler import StreamEventHandler
 from terminal_colors import TerminalColors as tc
@@ -20,6 +21,8 @@ from utilities import Utilities
 
 logging.basicConfig(level=logging.ERROR)
 logger = logging.getLogger(__name__)
+
+load_dotenv()
 
 TENTS_DATA_SHEET_FILE = "datasheet/contoso-tents-datasheet.pdf"
 API_DEPLOYMENT_NAME = os.getenv("MODEL_DEPLOYMENT_NAME")
