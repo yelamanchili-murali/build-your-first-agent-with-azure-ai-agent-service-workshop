@@ -67,3 +67,10 @@ if [ -f output.json ]; then
 else
   echo "Error: output.json not found."
 fi
+
+Set Variables
+subId = $(az account show --query id --output tsv)
+objectId = $(az ad signed-in-user show --query id -o tsv)
+
+#Adding data scientist role
+az role assignment create --role "f6c7c914-8db3-469d-8ca1-694a8f32e121" --assignee-object-id $objectId --scope /subscriptions/$subId/resourceGroups/"rg-agent-workshop" --assignee-principal-type 'User'
