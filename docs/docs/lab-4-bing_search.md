@@ -19,7 +19,12 @@ Follow these steps to create a Grounding with Bing Search Resource:
 
 1. Select **Create**.
 1. Select the **rg-agent-workshop** resource group from the drop-down list.
-1. Name the resource **grounding-with-bing-search**.
+1. Name the resource as follows:
+
+    ```text
+    grounding-with-bing-search
+    ```
+
 1. Select the **Grounding with Bing Search** pricing tier.
 1. Confirm **I confirm I have read and understood the notice above**.
 1. Select **Review + create**.
@@ -57,7 +62,12 @@ To create a Bing Search connection in the Azure AI Foundry portal, follow these 
     https://api.bing.microsoft.com/
     ```
 
-1. Set the connection name to **Grounding-with-Bing-Search**.
+1. Set the connection name to
+
+    ```text
+    Grounding-with-Bing-Search
+    ```
+
 1. Ensure the Access setting remains as **Shared to all projects**.
 1. Click "Add Connection"
 
@@ -92,7 +102,7 @@ For more information, visit the [Grounding with Bing Search](https://learn.micro
 
     async def add_agent_tools():
         """Add tools for the agent."""
-    
+
         # Add the functions tool
         toolset.add(functions)
 
