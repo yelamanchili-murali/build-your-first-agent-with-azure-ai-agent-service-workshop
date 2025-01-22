@@ -28,7 +28,7 @@ When you open the workshop in Visual Studio Code, you'll see the following folde
 
 ![Lab folder structure](./media/project_structure.png){:width="500"}
 
-## Assign an Azure Resource Group User Role
+<!-- ## Assign an Azure Resource Group User Role
 
 You need to assign a user role to the resource group that contains the Azure AI Agents Service. This role allows the agent app to access the Azure AI Agents Service and models.
 
@@ -63,11 +63,15 @@ Follow these steps to assign a user role to the resource group:
     ; az role assignment create --role "f6c7c914-8db3-469d-8ca1-694a8f32e121" --assignee-object-id $objectId --scope /subscriptions/$subId/resourceGroups/"rg-agent-workshop" --assignee-principal-type 'User'
     ```
 
-1. Leave the terminal window open for the next steps.
+1. Leave the terminal window open for the next steps. -->
 
 ## Open the Workshop
 
 Follow these steps to open the workshop in Visual Studio Code:
+
+1. Open a terminal window. The terminal app is **pinned** to the Windows 11 taskbar.
+
+    ![Open the terminal window](./media/windows-taskbar.png){ width="300" }
 
 1. Execute the following commands to clone the workshop repository, navigate to the relevant folder, set up a virtual environment, activate it, and install the required packages:
 
