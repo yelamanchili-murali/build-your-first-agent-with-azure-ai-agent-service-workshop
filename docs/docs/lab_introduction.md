@@ -28,15 +28,48 @@ When you open the workshop in Visual Studio Code, you'll see the following folde
 
 ![Lab folder structure](./media/project_structure.png){:width="500"}
 
+## Assign an Azure Resource Group User Role
+
+You need to assign a user role to the resource group that contains the Azure AI Agents Service. This role allows the agent app to access the Azure AI Agents Service and models.
+
+Follow these steps to assign a user role to the resource group:
+
+1. Open a terminal window. The terminal app is **pinned** to the Windows 11 taskbar.
+
+    ![Open the terminal window](./media/windows-taskbar.png){ width="300" }
+
+1. Run the following command to authenticate with Azure:
+
+    ```powershell
+    az login
+    ```
+
+    !!! note
+        You'll be prompted to open a browser link and log in to your Azure account.
+
+        1. A browser window will open automatically, select **Work or school account** and click **Next**.
+
+        1. Use the **Username** and **Password** found in the top section of the **Resources** tab in the lab environment.
+
+        1. Select **OK**, then **Done**.
+
+1. Then select the **Default** subscription from the command line.
+
+1. Once you've logged in, run the following command to assign the **user** role to the resource group:
+
+    ```powershell
+    $subId = $(az account show --query id --output tsv) `
+    ;$objectId = $(az ad signed-in-user show --query id -o tsv) `
+    ; az role assignment create --role "f6c7c914-8db3-469d-8ca1-694a8f32e121" --assignee-object-id $objectId --scope /subscriptions/$subId/resourceGroups/"rg-agent-workshop" --assignee-principal-type 'User'
+    ```
+
+1. Leave the terminal window open for the next steps.
+
 ## Open the Workshop
 
 Follow these steps to open the workshop in Visual Studio Code:
 
-1. Open a terminal window. The terminal app is **pinned** to the Windows 11 taskbar.
-
-    ![](./media/windows-taskbar.png){ width="300" }
-
-1. Open a terminal window and execute the following commands to clone the workshop repository, navigate to the relevant folder, set up a virtual environment, activate it, and install the required packages:
+1. Execute the following commands to clone the workshop repository, navigate to the relevant folder, set up a virtual environment, activate it, and install the required packages:
 
     ```powershell
     git clone https://github.com/gloveboxes/build-your-first-agent-with-azure-ai-agent-service-lab.git `
@@ -46,37 +79,7 @@ Follow these steps to open the workshop in Visual Studio Code:
     ; pip install -r requirements.txt
     ```
 
-<!-- 2. From the terminal window, clone the workshop repo by running the following command:
-
-    ```powershell
-    git clone https://github.com/gloveboxes/build-your-first-agent-with-azure-ai-agent-service-lab.git
-    ```
-
-1. Navigate to the workshop `src/workshop` folder for the repository you cloned in the previous step.
-
-    ```powershell
-    cd build-your-first-agent-with-azure-ai-agent-service-lab/src/workshop
-    ```
-
-2. Create a virtual environment by running the following command:
-
-    ```powershell
-    python -m venv .venv
-    ```
-
-3. Activate the virtual environment by running the following command:
-
-    ```powershell
-    .\.venv\Scripts\activate
-    ```
-
-4. Install the required packages by running the following command:
-
-    ```powershell
-    pip install -r requirements.txt
-    ``` -->
-
-5. Open in VS Code. From the terminal window, run the following command:
+2. Open in VS Code. From the terminal window, run the following command:
 
     ```powershell
     code .
