@@ -114,6 +114,11 @@ Log into Azure AI Foundry to retrieve the **project connection string**, which t
 
 1. Switch back to workshop you opened in VS Code.
 2. **Rename** the `.env.sample` file to `.env`.
+
+    - Select the **.env.sample** file in the **Explorer** panel.
+    - Right-click the file and select **Rename**, or press `F2`.
+    - Change the file name to `.env` and press `Enter`.
+
 3. Paste the **Project connection string** you copied from Azure AI Foundry into the `.env` file.
 
     ```python
