@@ -11,8 +11,9 @@ nav:
   - Lab 4 Grounding with Bing Search: lab-4-bing_search.md
   - Lab 5 Instrumentation: lab-5-instrumentation.md
   - Summary: summary.md
+  - Resources: resources.md
   - Deployment: deployment.md
-  - Troubleshooting: troubleshooting.md
+
 
   # - Conversation: conversation.md
   # - Development: development.md
