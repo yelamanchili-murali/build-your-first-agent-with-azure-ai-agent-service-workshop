@@ -91,7 +91,7 @@ Follow these steps to open the workshop in Visual Studio Code:
 
 ## Project Connection String
 
-We're going to log into Azure AI Foundry to retrieve the **project connection string**, which the agent app uses to connect to the Azure AI Agents Service.
+Next, we log in to Azure AI Foundry to retrieve the project connection string, which the agent app uses to connect to the Azure AI Agents Service.
 
 1. Navigate to the [Azure AI Foundry](https://ai.azure.com){:target="_blank"} website.
 2. Select **Sign in** and use the **Username** and **Password** found in the top section of the **Resources** tab in the lab environment. Click on the **Username** and **Password** fields to automatically fill in the login details.
@@ -115,9 +115,9 @@ We're going to log into Azure AI Foundry to retrieve the **project connection st
 1. Switch back to workshop you opened in VS Code.
 2. **Rename** the `.env.sample` file to `.env`.
 
-    - Select the **.env.sample** file in the **Explorer** panel.
-    - Right-click the file and select **Rename**, or press `F2`.
-    - Change the file name to `.env` and press `Enter`.
+    - Select the **.env.sample** file in the VS Code **Explorer** panel.
+    - Right-click the file and select **Rename**, or press <kbd>F2</kbd>.
+    - Change the file name to `.env` and press <kbd>Enter</kbd>.
 
 3. Paste the **Project connection string** you copied from Azure AI Foundry into the `.env` file.
 

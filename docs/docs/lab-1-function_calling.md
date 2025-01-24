@@ -124,14 +124,14 @@ Start asking questions about Contoso sales data. For example:
 
 1. **Help**
 
-    Here is an example of the LLM response to the `help` query:
+    Here is an example of the LLM response to the **help** query:
 
     I’m here to help with your sales data inquiries at Contoso. Could you please provide more details about what you need assistance with? Here are some example queries you might consider:
 
-    - `What were the sales by region?`
-    - `What was last quarter's revenue?`
-    - `Which products sell best in Europe?`
-    - `Total shipping costs by region?`
+    - What were the sales by region?
+    - What was last quarter's revenue?
+    - Which products sell best in Europe?
+    - Total shipping costs by region?
 
     Feel free to ask any specific questions related to Contoso sales data!
 
@@ -141,7 +141,7 @@ Start asking questions about Contoso sales data. For example:
 
 2. **What are the sales by region?**
 
-    Here is an example of the LLM response to the `sales by region` query:
+    Here is an example of the LLM response to the **sales by region** query:
 
         | Region         | Total Revenue  |
         |----------------|----------------|
