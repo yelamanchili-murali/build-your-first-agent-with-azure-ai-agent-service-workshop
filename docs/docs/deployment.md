@@ -30,4 +30,4 @@ If you’re running this workshop on your own, you'll need to deploy the worksho
 
 ## Run the workshop
 
-Once the deployment is complete, follow the steps in the [Lab Introduction](./lab_introduction.md) to run the workshop.
+After the deployment is complete, follow the steps in the [Lab Introduction](./lab_introduction.md) to run the workshop. Please note that the lab instructions reference the Skillable lab environment username and password. Since you are deploying your own resources, you will need to use your own Azure username and password instead.
