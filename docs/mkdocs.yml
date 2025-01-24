@@ -15,13 +15,6 @@ nav:
   - Deployment: deployment.md
 
 
-  # - Conversation: conversation.md
-  # - Development: development.md
-  # - Deployment: deployment.md
-  
-
-
-
 plugins:
   - glightbox
 
