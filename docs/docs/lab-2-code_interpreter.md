@@ -87,7 +87,7 @@ Try these questions:
         3. Using the returned data, the LLM writes Python code to create a Pie Chart.
         4. Finally, the Code Interpreter executes the Python code to generate the chart.
 
-2. **Download the sales data**
+2. **Download the sales by region data**
 
     Once the task is complete, check the **files** folder to see the downloaded file.
 
