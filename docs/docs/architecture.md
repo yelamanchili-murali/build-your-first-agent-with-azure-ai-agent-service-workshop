@@ -12,14 +12,17 @@ The workshop solution is highly adaptable to various scenarios, such as customer
 
 ### Best Practices Demonstrated in the App
 
-- **Asynchronous APIs**:  
+- **Asynchronous APIs**:
   In the workshop sample, both the Azure AI Agent Service and SQLite use asynchronous APIs, optimizing resource efficiency and scalability. This design choice becomes especially advantageous when deploying the application with asynchronous web frameworks like FastAPI, Chainlit, or Streamlit.
 
-- **Token Streaming**:  
+- **Token Streaming**:
   Token streaming is implemented to improve user experience by reducing perceived response times for the LLM-powered agent app.
 
-<!-- ## Solution structure
+## Fork the Workshop Repository
 
-//TODO include a description of the VS Code project
+Take a moment to fork the workshop repository to your GitHub account. This will make it easy to experiment with the code after you've completed the workshop.
 
-//TODO Screenshots - File Explorer on the left and down in white -->
+1. Right-click [this link](https://aka.ms/aitour/wrk552/repo){:target="_blank"} and select Copy link.
+2. Open a **new browser tab** on your **computer** (not in the Lab environment).
+3. **Paste** the link into the browser's address bar and press **Enter**.
+4. Click the **Fork** button in the upper right corner of the page.

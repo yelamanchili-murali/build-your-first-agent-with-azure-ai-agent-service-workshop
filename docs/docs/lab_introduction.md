@@ -17,6 +17,10 @@ Each lab in this workshop includes:
 
 !!! tip "If you have trouble viewing an image, simply click the image to enlarge it."
 
+## Viewing the Lab Instructions
+
+!!! tip "If the lab instructions are slow to scroll in the lab environment, try copying the instructions’ URL and opening it in your computer’s local browser for a smoother experience."
+
 ## Project Structure
 
 When you open the workshop in Visual Studio Code, you'll see the following folder structure. Take note of the key folders and files you'll be working with during the workshop:
