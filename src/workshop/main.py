@@ -30,7 +30,8 @@ PROJECT_CONNECTION_STRING = os.environ["PROJECT_CONNECTION_STRING"]
 BING_CONNECTION_NAME = os.getenv("BING_CONNECTION_NAME")
 MAX_COMPLETION_TOKENS = 4096
 MAX_PROMPT_TOKENS = 10240
-TEMPERATURE = 0.2
+TEMPERATURE = 0.1
+TOP_P = 0.1
 
 toolset = AsyncToolSet()
 sales_data = SalesData()
@@ -50,7 +51,7 @@ functions = AsyncFunctionTool(
 # INSTRUCTIONS_FILE = "instructions/instructions_function_calling.txt"
 # INSTRUCTIONS_FILE = "instructions/instructions_code_interpreter.txt"
 # INSTRUCTIONS_FILE = "instructions/instructions_file_search.txt"
-# INSTRUCTIONS_FILE = "instructions/instructions_code_bing_grounding.txt"
+# INSTRUCTIONS_FILE = "instructions/instructions_bing_grounding.txt"
 
 
 async def add_agent_tools():
@@ -138,6 +139,7 @@ async def post_message(thread_id: str, content: str, agent: Agent, thread: Agent
             max_completion_tokens=MAX_COMPLETION_TOKENS,
             max_prompt_tokens=MAX_PROMPT_TOKENS,
             temperature=TEMPERATURE,
+            top_p=TOP_P,
             instructions=agent.instructions,
         )
 

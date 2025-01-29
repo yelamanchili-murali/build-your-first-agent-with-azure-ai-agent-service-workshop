@@ -39,7 +39,7 @@ A [vector store](https://en.wikipedia.org/wiki/Vector_database){:target="_blank"
     INSTRUCTIONS_FILE = "instructions/instructions_function_calling.txt"
     INSTRUCTIONS_FILE = "instructions/instructions_code_interpreter.txt"
     INSTRUCTIONS_FILE = "instructions/instructions_file_search.txt"
-    # INSTRUCTIONS_FILE = "instructions/instructions_code_bing_grounding.txt"
+    # INSTRUCTIONS_FILE = "instructions/instructions_bing_grounding.txt"
 
 
     async def add_agent_tools():

@@ -80,7 +80,7 @@ For more information, visit the [Grounding with Bing Search](https://learn.micro
 1. **Uncomment** the following lines by removing the **"# "** characters
 
     ```python
-    # INSTRUCTIONS_FILE = "instructions/instructions_code_bing_grounding.txt"
+    # INSTRUCTIONS_FILE = "instructions/instructions_bing_grounding.txt"
     # bing_connection = project_client.connections.get(connection_name=BING_CONNECTION_NAME)
     # bing_grounding = BingGroundingTool(bing_connection)
     # toolset.add(bing_grounding)
@@ -97,7 +97,7 @@ For more information, visit the [Grounding with Bing Search](https://learn.micro
     INSTRUCTIONS_FILE = "instructions/instructions_function_calling.txt"
     INSTRUCTIONS_FILE = "instructions/instructions_code_interpreter.txt"
     INSTRUCTIONS_FILE = "instructions/instructions_file_search.txt"
-    INSTRUCTIONS_FILE = "instructions/instructions_code_bing_grounding.txt"
+    INSTRUCTIONS_FILE = "instructions/instructions_bing_grounding.txt"
 
 
     async def add_agent_tools():
@@ -127,7 +127,7 @@ For more information, visit the [Grounding with Bing Search](https://learn.micro
 
 ### Review the Instructions
 
-The **instructions/instructions_code_bing_grounding.txt** file provides guidance on how the LLM should use Bing search for grounding purposes. It ensures that queries remain relevant to Contoso and maintain a focus on contextually appropriate searches.
+The **instructions/instructions_bing_grounding.txt** file provides guidance on how the LLM should use Bing search for grounding purposes. It ensures that queries remain relevant to Contoso and maintain a focus on contextually appropriate searches.
 
 ### Run the Agent App
 
