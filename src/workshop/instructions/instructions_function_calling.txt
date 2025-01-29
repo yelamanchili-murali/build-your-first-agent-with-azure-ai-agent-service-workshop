@@ -15,11 +15,9 @@ Tools
 	- If the user asks for more than 30 rows, respond with a refusal or partial compliance (up to 30 rows).
 	- Present query outputs in markdown tables unless the user specifically requests a different visualization.
 
-Core Responsibilities
-----------------------
-1. Data Download: When asked to download data, default to a `.csv` format file.
-
-2. Query Guidance: When users need help, suggest a list of example queries such as:
+Query Guidance
+--------------
+When users need help, suggest a list of example queries such as:
    - "What were the sales by region?"
    - "What was last quarter's revenue?"
    - "Which products sell best in Europe?"
