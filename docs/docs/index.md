@@ -14,9 +14,19 @@ Unlike traditional applications, where developers define the logic and workflows
 
 ## What is the Azure AI Agent Service
 
-The Azure AI Agent Service is now in public preview, offering a single-agent cloud service with supporting SDKs. Developers can access SDKs for [Python](https://learn.microsoft.com/azure/ai-services/agents/quickstart?pivots=programming-language-python-azure){:target="_blank"} and [C#](https://learn.microsoft.com/azure/ai-services/agents/quickstart?pivots=programming-language-csharp){:target="_blank"}.
+The Azure AI Agent Service is now in public preview, offering a fully managed cloud service with SDKs for [Python](https://learn.microsoft.com/azure/ai-services/agents/quickstart?pivots=programming-language-python-azure){:target="_blank"} and [C#](https://learn.microsoft.com/azure/ai-services/agents/quickstart?pivots=programming-language-csharp){:target="_blank"}. It simplifies AI agent development, reducing complex tasks like function calling to just a few lines of code.
 
-The Azure AI Agent Service simplifies the creation of intelligent agents by offering built-in conversation state management and compatibility with various AI models. It provides a range of ready-to-use tools, including integrations with Fabric, SharePoint, Azure AI Search, and Azure Storage. The service also supports custom integrations through the Function Calling tool and enables RAG-style search capabilities with a built-in vector store for “file search” and semantic search features. Designed for scalability, it ensures smooth performance even under varying user loads.
+!!! info "Function calling allows you to connect LLMs to external tools and systems. This is useful for many things such as empowering AI agents with capabilities, or building deep integrations between your applications and LLMs."
+
+The Azure AI Agent Service offers several advantages over traditional agent platforms:
+
+- **Rapid Deployment**: Optimized SDK for fast deployment, letting developers focus on building agents.
+- **Scalability**: Designed to handle varying user loads without performance issues.
+- **Custom Integrations**: Supports Function Calling for extending agent capabilities.
+- **Built-in Tools**: Includes Fabric, SharePoint, Azure AI Search, and Azure Storage for quick development.
+- **RAG-Style Search**: Features a built-in vector store for efficient file and semantic search.
+- **Conversation State Management**: Maintains context across multiple interactions.
+- **AI Model Compatibility**: Works with various AI models.
 
 Learn more about the Azure AI Agent Service in the [Azure AI Agent Service documentation](https://learn.microsoft.com/azure/ai-services/agents/overview){:target="_blank"}. In particular, read about the [components of agents](https://learn.microsoft.com/azure/ai-services/agents/concepts/agents#agents-components){:target="_blank"}.
 

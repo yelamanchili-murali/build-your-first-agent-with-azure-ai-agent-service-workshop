@@ -86,7 +86,9 @@ In this lab, you'll enable the function logic to execute dynamic SQL queries aga
 
 Open the **instructions/instructions_function_calling.txt** file and review the **Tools** section for details on the function-calling instructions.
 
-!!! note
+!!! tip "In VS Code, press Alt + Z (Windows/Linux) or Option + Z (Mac) to enable word wrap mode, making the instructions easier to read."
+
+!!! info
     The {database_schema_string} placeholder in the instructions is replaced with the actual database schema when the app initializes.
 
     ```python
@@ -176,7 +178,7 @@ Start asking questions about Contoso sales data. For example:
 4. **Show sales by category for europe**
 5. **Breakout sales by footwear**
 
-### Debug the App
+### Debug the App (Optional)
 
 Set a [breakpoint](https://code.visualstudio.com/Docs/editor/debugging){:target="_blank"} in the `async_fetch_sales_data_using_sqlite_query` function located in `sales_data.py` to observe how the LLM requests data.
 

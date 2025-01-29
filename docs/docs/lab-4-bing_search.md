@@ -48,7 +48,7 @@ Next, we will create a Bing Search connection in the Azure AI Foundry portal. Th
 To create a Bing Search connection in the Azure AI Foundry portal, follow these steps:
 
 1. Select the project, its name starts with **aip**.
-2. In the side-bar menu, click on the **Management center** tab. You'll find this under **Project details** in the **Manage project settings** section.
+2. From the sidebar menu, click the **Management Center** tab. The tab is pinned at the **bottom** of the sidebar.
 
 ### Add an API Key
 

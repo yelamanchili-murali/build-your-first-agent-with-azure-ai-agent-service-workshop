@@ -93,6 +93,8 @@ Follow these steps to open the workshop in Visual Studio Code:
     code .
     ```
 
+    !!! warning "When the project opens in VS Code, two notifications appear in the bottom right corner. Click ✖ to close both notifications."
+
 ## Project Connection String
 
 Next, we log in to Azure AI Foundry to retrieve the project connection string, which the agent app uses to connect to the Azure AI Agents Service.
