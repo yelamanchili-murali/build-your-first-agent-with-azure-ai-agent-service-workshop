@@ -6,7 +6,7 @@ If you’re running this workshop on your own, you'll need to deploy the worksho
 
 1. An Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/){:target="_blank"} before you begin.
 2. Install the [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli){:target="_blank"}.
-3. Install [Powershell (supported on Windows, macOS, and Linux)](https://learn.microsoft.com/powershell/scripting/install/installing-powershell){:target="_blank"}.
+3. Install [Powershell 7 (supported on Windows, macOS, and Linux)](https://learn.microsoft.com/powershell/scripting/install/installing-powershell){:target="_blank"}.
 4. Open a terminal window.
 5. Clone the workshop repo by running the following command:
 
