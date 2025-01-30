@@ -13,14 +13,6 @@ Each lab in this workshop includes:
 - An **Introduction**: Explains the relevant concepts.
 - An **Exercise**: Guides you through the process of implementing the feature.
 
-## Viewing Images
-
-!!! tip "If you have trouble viewing an image, simply click the image to enlarge it."
-
-## Viewing the Lab Instructions
-
-!!! tip "If the lab instructions are slow to scroll in the lab environment, try copying the instructions’ URL and opening it in your computer’s local browser for a smoother experience."
-
 ## Project Structure
 
 When you open the workshop in Visual Studio Code, you'll see the following folder structure. Take note of the key folders and files you'll be working with during the workshop:
@@ -140,7 +132,9 @@ Next, we log in to Azure AI Foundry to retrieve the project connection string, w
     PROJECT_CONNECTION_STRING="<your_project_connection_string>"
     ```
 
-## Pro Tip
+## Pro Tips
 
-!!! tip
-    The **Burger Menu** in the right-hand panel of the lab environment offers additional features, including the **Split Window View** and the option to end the lab. The **Split Window View** allows you to maximize the lab environment to full screen, optimizing screen space. The lab's **Instructions** and **Resources** panel will open in a separate window.
+!!! tips
+    1. The **Burger Menu** in the right-hand panel of the lab environment offers additional features, including the **Split Window View** and the option to end the lab. The **Split Window View** allows you to maximize the lab environment to full screen, optimizing screen space. The lab's **Instructions** and **Resources** panel will open in a separate window.
+    2. If the lab instructions are slow to scroll in the lab environment, try copying the instructions’ URL and opening it in **your computer’s local browser** for a smoother experience.
+    3. If you have trouble viewing an image, simply **click the image to enlarge it**.
