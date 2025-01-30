@@ -48,8 +48,16 @@ You need to authenticate with Azure so the agent app can access the Azure AI Age
         3. Select **OK**, then **Done**.
 
 3. Then select the **Default** subscription from the command line.
+   
+4. Once you've logged in, run the following command to assign the **user** role to the resource group:
 
-4. Leave the terminal window open for the next steps.
+    ```powershell
+    $subId = $(az account show --query id --output tsv) `
+    ;$objectId = $(az ad signed-in-user show --query id -o tsv) `
+    ; az role assignment create --role "f6c7c914-8db3-469d-8ca1-694a8f32e121" --assignee-object-id $objectId --scope /subscriptions/$subId/resourceGroups/"rg-agent-workshop" --assignee-principal-type 'User'
+    ```
+
+5. Leave the terminal window open for the next steps.
 
 ## Open the Workshop
 
