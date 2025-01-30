@@ -84,7 +84,8 @@ Follow these steps to open the workshop in Visual Studio Code:
     ; cd build-your-first-agent-with-azure-ai-agent-service-lab/src/workshop `
     ; python -m venv .venv `
     ; .\.venv\Scripts\activate `
-    ; pip install -r requirements.txt
+    ; pip install -r requirements.txt `
+    ; code --install-extension tomoki1207.pdf
     ```
 
 2. Open in VS Code. From the terminal window, run the following command:
