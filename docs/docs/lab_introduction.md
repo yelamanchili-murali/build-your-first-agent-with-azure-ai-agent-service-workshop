@@ -122,6 +122,8 @@ Next, we log in to Azure AI Foundry to retrieve the project connection string, w
     PROJECT_CONNECTION_STRING="<your_project_connection_string>"
     ```
 
+4. Save the `.env` file.
+
 ## Pro Tips
 
 !!! tips
