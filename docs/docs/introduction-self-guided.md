@@ -92,12 +92,12 @@ Next, we log in to Azure AI Foundry to retrieve the project connection string, w
 
 ## Workshop Configuration
 
-The deploy script generates the src/workshop/.env file, which contains the project connection string, model deployment name, and Bing connection name.
+The deploy script generates the **src/workshop/.env** file, which contains the project connection string, model deployment name, and Bing connection name.
 
-    Your `.env` file should look similar to this but with your project connection string.
+Your **.env** file should look similar to this but with your project connection string.
 
-    ```python
-    MODEL_DEPLOYMENT_NAME="gpt-4o"
-    BING_CONNECTION_NAME="Grounding-with-Bing-Search"
-    PROJECT_CONNECTION_STRING="<your_project_connection_string>"
-    ```
+```python
+MODEL_DEPLOYMENT_NAME="gpt-4o"
+BING_CONNECTION_NAME="Grounding-with-Bing-Search"
+PROJECT_CONNECTION_STRING="<your_project_connection_string>"
+```
