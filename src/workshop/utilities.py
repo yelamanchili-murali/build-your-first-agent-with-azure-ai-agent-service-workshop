@@ -1,5 +1,4 @@
 import os
-import asyncio
 from pathlib import Path
 
 from azure.ai.projects.aio import AIProjectClient
@@ -29,8 +28,10 @@ class Utilities:
             os.path.basename(attachment_name.split(":")[-1]))
         file_name = f"{file_name}.{file_id}{file_extension}"
 
-        folder_path = Path("files")
-        folder_path.mkdir(exist_ok=True)
+        env = os.getenv("ENVIRONMENT", "local")
+        folder_path = Path(f"{'src/workshop/' if env == 'container' else ''}files")
+
+        folder_path.mkdir(parents=True, exist_ok=True)
 
         file_path = folder_path / file_name
 
