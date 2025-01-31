@@ -39,7 +39,7 @@ The workshop’s source code is located in the **src/workshop** folder. Be sure 
 
 You need to authenticate with Azure so the agent app can access the Azure AI Agents Service and models. Follow these steps:
 
-1. Open a new terminal window in VS Code. From the **VS Code menu**, select **File**, then **New Window**.
+1. Open a new terminal window in VS Code. From the **VS Code menu**, select **Terminal**, then **New Terminal**.
 2. Run the following command to authenticate with Azure:
 
     ```powershell
