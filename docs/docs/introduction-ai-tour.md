@@ -24,10 +24,11 @@ Each lab in this workshop includes:
 
 When you open the workshop in Visual Studio Code, you'll see the following folder structure. Take note of the key folders and files you'll be working with during the workshop:
 
-1. The **instructions**: folder contains the instructions passed to the LLM.
-2. The **main.py**: The entry point for the app, containing its main logic.
-3. The **sales_data.py**: Contains the function logic to execute dynamic SQL queries against the SQLite database.
-4. The **stream_event_handler.py**: Contains the event handler logic for token streaming.
+1. The **files folder**: Contains the files created by the agent app.
+1. The **instructions folder**: Contains the instructions passed to the LLM.
+1. The **main.py**: The entry point for the app, containing its main logic.
+1. The **sales_data.py**: Contains the function logic to execute dynamic SQL queries against the SQLite database.
+1. The **stream_event_handler.py**: Contains the event handler logic for token streaming.
 
 ![Lab folder structure](./media/project_structure.png)
 
