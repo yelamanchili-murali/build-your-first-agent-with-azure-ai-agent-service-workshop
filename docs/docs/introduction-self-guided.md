@@ -7,7 +7,7 @@ This workshop is designed to teach you about the Azure AI Agents Service and the
 ## Prerequisites
 
 1. Access to an Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/){:target="_blank"} before you begin.
-1. You need a GitHub account. If you don’t have one, create it at [GitHub](https://github.com/join).
+1. You need a GitHub account. If you don’t have one, create it at [GitHub](https://github.com/join){:target="_blank"}.
 
 ## GitHub Codespaces
 
