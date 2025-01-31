@@ -4,7 +4,12 @@ These instructions are for self-guided learners who are not part of the AI Tour 
 
 This workshop is designed to teach you about the Azure AI Agents Service and the Python SDK. It consists of multiple labs, each highlighting a specific feature of the Azure AI Agents Service. The labs are meant to be completed in order, as each one builds on the knowledge and work from the previous lab.
 
-### GitHub Codespaces
+## Prerequisites
+
+1. Access to an Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/){:target="_blank"} before you begin.
+1. A GitHub account. 
+
+## GitHub Codespaces
 
 The preferred way to run this workshop is using GitHub Codespaces. This option provides a pre-configured environment with all the tools and resources needed to complete the workshop.
 
