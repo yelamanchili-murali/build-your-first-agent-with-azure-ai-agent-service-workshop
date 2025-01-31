@@ -56,9 +56,9 @@ if [ -f output.json ]; then
 
     # Write to the .env file
     {
-      echo 'PROJECT_CONNECTION_STRING="$PROJECT_CONNECTION_STRING"'
-      echo 'BING_CONNECTION_NAME="Grounding-with-Bing-Search"'
-      echo 'MODEL_DEPLOYMENT_NAME="$MODEL_NAME"'
+      echo "PROJECT_CONNECTION_STRING=\"$PROJECT_CONNECTION_STRING\""
+      echo "BING_CONNECTION_NAME=\"Grounding-with-Bing-Search\""
+      echo "MODEL_DEPLOYMENT_NAME=\"$MODEL_NAME\""
     } > "$ENV_FILE_PATH"
 
     # Delete the output.json file
