@@ -73,7 +73,7 @@ You need to authenticate with Azure so the agent app can access the Azure AI Age
 
 1. Follow the prompts to deploy the workshop resources to your Azure subscription.
 
-## Project Connection String
+<!-- ## Project Connection String
 
 Next, we log in to Azure AI Foundry to retrieve the project connection string, which the agent app uses to connect to the Azure AI Agents Service.
 
@@ -88,22 +88,11 @@ Next, we log in to Azure AI Foundry to retrieve the project connection string, w
 6. Review the introduction guide and click **Close**.
 7. Locate the **Project details** section, click the **Copy** icon to copy the **Project connection string**.
 
-    ![Copy connection string](./media/project-connection-string.png){:width="500"}
+    ![Copy connection string](./media/project-connection-string.png){:width="500"} -->
 
-## Configure the Workshop
+## Workshop Configuration
 
-1. Switch back to workshop you opened in VS Code.
-2. **Rename** the `.env.sample` file to `.env`.
-
-    - Select the **.env.sample** file in the VS Code **Explorer** panel.
-    - Right-click the file and select **Rename**, or press <kbd>F2</kbd>.
-    - Change the file name to `.env` and press <kbd>Enter</kbd>.
-
-3. Paste the **Project connection string** you copied from Azure AI Foundry into the `.env` file.
-
-    ```python
-    PROJECT_CONNECTION_STRING="<your_project_connection_string>"
-    ```
+The deploy script generates the src/workshop/.env file, which contains the project connection string, model deployment name, and Bing connection name.
 
     Your `.env` file should look similar to this but with your project connection string.
 
@@ -112,5 +101,3 @@ Next, we log in to Azure AI Foundry to retrieve the project connection string, w
     BING_CONNECTION_NAME="Grounding-with-Bing-Search"
     PROJECT_CONNECTION_STRING="<your_project_connection_string>"
     ```
-
-4. Save the `.env` file.
