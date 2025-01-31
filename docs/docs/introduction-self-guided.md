@@ -68,7 +68,7 @@ You need to authenticate with Azure so the agent app can access the Azure AI Age
 1. Run the deployment script with the following command:
 
     ```bash
-    deploy.sh
+    ./deploy.sh
     ```
 
 1. Follow the prompts to deploy the workshop resources to your Azure subscription.
