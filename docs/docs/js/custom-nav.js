@@ -8,7 +8,7 @@ function updateNextNavLink() {
         const nextLink = document.querySelector('a.md-footer__link--next'); // More specific selector
         if (nextLink) {
             const baseUrl = window.location.origin; // Get the base URL (e.g., http://127.0.0.1:8000)
-            nextLink.href = `${baseUrl}/lab-1-function_calling`; // Set the absolute URL
+            nextLink.href = `/lab-1-function_calling`;
             nextLink.querySelector('.md-footer__title .md-ellipsis').textContent = 'Lab 1 Function Calling Power';
             // console.log('Next link updated to:', nextLink.href);
         }
