@@ -13,7 +13,7 @@ nav:
   - Summary: summary.md
   - Resources: resources.md
   - Deployment: deployment.md
-  - Troubleshooting: troubleshooting.md
+  # - Troubleshooting: troubleshooting.md
 
 
 plugins:
