@@ -58,20 +58,11 @@ You need to authenticate with Azure so the agent app can access the Azure AI Age
 
 ## Deploy the Azure Resources
 
+From the VS Code terminal run the following command:
 
-1. Navigate to the workshop `infra` folder for the repository you cloned in the previous step.
-
-    ```bash
-    cd infra
-    ```
-
-1. Run the deployment script with the following command:
-
-    ```bash
-    ./deploy.sh
-    ```
-
-1. Follow the prompts to deploy the workshop resources to your Azure subscription.
+```bash
+cd infra && ./deploy.sh
+```
 
 <!-- ## Project Connection String
 
