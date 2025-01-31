@@ -6,3 +6,5 @@ RUN python -m pip install --upgrade pip
 # Copy requirements.txt and install the packages
 COPY ../src/workshop/requirements.txt .
 RUN pip install -r requirements.txt
+
+ENV ENVIRONMENT=container

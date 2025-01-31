@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 from typing import Optional, Coroutine
 
 import aiosqlite
@@ -20,7 +21,8 @@ class SalesData:
         self.conn = None
 
     async def connect(self: "SalesData") -> None:
-        db_uri = f"file:{DATA_BASE}?mode=ro"
+        env = os.getenv("ENVIRONMENT", "local")
+        db_uri = f"file:{'src/workshop/' if env == 'container' else ''}{DATA_BASE}?mode=ro"
 
         try:
             self.conn = await aiosqlite.connect(db_uri, uri=True)
