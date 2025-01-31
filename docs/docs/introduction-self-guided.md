@@ -42,7 +42,7 @@ You need to authenticate with Azure so the agent app can access the Azure AI Age
 2. Run the following command to authenticate with Azure:
 
     ```powershell
-    az login
+    az login --use-device-code
     ```
 
     !!! note
