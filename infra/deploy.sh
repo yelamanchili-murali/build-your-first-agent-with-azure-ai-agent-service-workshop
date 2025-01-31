@@ -34,10 +34,10 @@ az deployment group create \
 
 # Parse the JSON file manually using grep and sed
 if [ -f output.json ]; then
-  AI_PROJECT_NAME=$(grep -oP '"aiProjectName":\s*{\s*"value":\s*"\K[^"]*' output.json)
-  RESOURCE_GROUP_NAME=$(grep -oP '"resourceGroupName":\s*{\s*"value":\s*"\K[^"]*' output.json)
-  SUBSCRIPTION_ID=$(grep -oP '"subscriptionId":\s*{\s*"value":\s*"\K[^"]*' output.json)
-  BING_GROUNDING_NAME=$(grep -oP '"bingGroundingName":\s*{\s*"value":\s*"\K[^"]*' output.json)
+  AI_PROJECT_NAME=$(jq -r '.properties.outputs.aiProjectName.value' output.json)
+  RESOURCE_GROUP_NAME=$(jq -r '.properties.outputs.resourceGroupName.value' output.json)
+  SUBSCRIPTION_ID=$(jq -r '.properties.outputs.subscriptionId.value' output.json)
+  BING_GROUNDING_NAME=$(jq -r '.properties.outputs.bingGroundingName.value' output.json)
 
   # Run the Azure CLI command to get discovery_url
   DISCOVERY_URL=$(az ml workspace show -n "$AI_PROJECT_NAME" --resource-group "$RESOURCE_GROUP_NAME" --query discovery_url -o tsv)
@@ -49,16 +49,16 @@ if [ -f output.json ]; then
     # Generate the PROJECT_CONNECTION_STRING
     PROJECT_CONNECTION_STRING="\"$HOST_NAME;$SUBSCRIPTION_ID;$RESOURCE_GROUP_NAME;$AI_PROJECT_NAME\""
 
-    ENV_FILE_PATH=".env"
+    ENV_FILE_PATH="../src/workshop/.env"
 
     # Delete the file if it exists
     [ -f "$ENV_FILE_PATH" ] && rm "$ENV_FILE_PATH"
 
     # Write to the .env file
     {
-      echo "PROJECT_CONNECTION_STRING=$PROJECT_CONNECTION_STRING"
-      echo "BING_CONNECTION_NAME=$BING_GROUNDING_NAME"
-      echo "MODEL_DEPLOYMENT_NAME=$MODEL_NAME"
+      echo 'PROJECT_CONNECTION_STRING="$PROJECT_CONNECTION_STRING"'
+      echo 'BING_CONNECTION_NAME="Grounding-with-Bing-Search"'
+      echo 'MODEL_DEPLOYMENT_NAME="$MODEL_NAME"'
     } > "$ENV_FILE_PATH"
 
     # Delete the output.json file
