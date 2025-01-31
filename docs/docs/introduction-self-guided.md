@@ -8,7 +8,7 @@ This workshop is designed to teach you about the Azure AI Agents Service and the
 
 The preferred way to run this workshop is using GitHub Codespaces. This option provides a pre-configured environment with all the tools and resources needed to complete the workshop.
 
-Select the **Open in GitHub Codespaces** to open the project in GitHub Codespaces.
+Select **Open in GitHub Codespaces** to open the project in GitHub Codespaces.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/microsoft/build-your-first-agent-with-azure-ai-agent-service-workshop){:target="_blank"}
 
