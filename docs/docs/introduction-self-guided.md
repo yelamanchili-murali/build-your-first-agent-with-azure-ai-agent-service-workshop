@@ -1,0 +1,115 @@
+## Getting Started with the Workshop
+
+This workshop is designed to teach you about the Azure AI Agents Service and the Python SDK. It consists of multiple labs, each highlighting a specific feature of the Azure AI Agents Service. The labs are meant to be completed in order, as each one builds on the knowledge and work from the previous lab.
+
+## Self-guided learners
+
+These instructions are for self-guided learners who are not part of the AI Tour and do not have access to a pre-configured lab environment. Follow these steps to set up your environment and begin the workshop.
+
+### GitHub Codespaces
+
+The preferred way to run this workshop is using GitHub Codespaces. This option provides a pre-configured environment with all the tools and resources needed to complete the workshop.
+
+Select the **Open in GitHub Codespaces** to open the project in GitHub Codespaces.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/microsoft/build-your-first-agent-with-azure-ai-agent-service-workshop)
+
+!!! Warning "It will take several minutes to build the Codespace so carry on reading the instructions while it builds."
+
+## Lab Structure
+
+Each lab in this workshop includes:
+
+- An **Introduction**: Explains the relevant concepts.
+- An **Exercise**: Guides you through the process of implementing the feature.
+
+## Project Structure
+
+The workshop’s source code is located in the **src/workshop** folder. Be sure to familiarize yourself with the key **subfolders** and **files** you’ll be working with throughout the session.
+
+1. The **instructions**: folder contains the instructions passed to the LLM.
+2. The **main.py**: The entry point for the app, containing its main logic.
+3. The **sales_data.py**: Contains the function logic to execute dynamic SQL queries against the SQLite database.
+4. The **stream_event_handler.py**: Contains the event handler logic for token streaming.
+
+![Lab folder structure](./media/project_structure.png)
+
+## Authenticate with Azure
+
+You need to authenticate with Azure so the agent app can access the Azure AI Agents Service and models. Follow these steps:
+
+1. Open a terminal window.
+2. Run the following command to authenticate with Azure:
+
+    ```powershell
+    az login
+    ```
+
+    !!! note
+        You'll be prompted to open a browser link and log in to your Azure account.
+
+        1. A browser window will open automatically, select your account type and click **Next**.
+        2. Sign in with your Azure subscription **Username** and **Password**.
+        3. Select **OK**, then **Done**.
+
+3. Then select the appropriate subscription from the command line.
+4. Leave the terminal window open for the next steps.
+
+## Deploy the Azure Resources
+
+
+1. Navigate to the workshop `infra` folder for the repository you cloned in the previous step.
+
+    ```bash
+    cd infra
+    ```
+
+1. Run the deployment script with the following command:
+
+    ```bash
+    deploy.sh
+    ```
+
+1. Follow the prompts to deploy the workshop resources to your Azure subscription.
+
+## Project Connection String
+
+Next, we log in to Azure AI Foundry to retrieve the project connection string, which the agent app uses to connect to the Azure AI Agents Service.
+
+1. Navigate to the [Azure AI Foundry](https://ai.azure.com){:target="_blank"} website.
+2. Sign in with your Azure subscription **Username** and **Password**.
+3. Read the introduction to the Azure AI Foundry and click **Got it**.
+4. Ensure you are on the AI Foundry home page. Click the **AI Foundry** tab in the top left corner.
+
+    ![AI Foundry home page](./media/ai-foundry-home.png){:width="200"}
+
+5. Select the **agent-workshop** project.
+6. Review the introduction guide and click **Close**.
+7. Locate the **Project details** section, click the **Copy** icon to copy the **Project connection string**.
+
+    ![Copy connection string](./media/project-connection-string.png){:width="500"}
+
+## Configure the Workshop
+
+1. Switch back to workshop you opened in VS Code.
+2. **Rename** the `.env.sample` file to `.env`.
+
+    - Select the **.env.sample** file in the VS Code **Explorer** panel.
+    - Right-click the file and select **Rename**, or press <kbd>F2</kbd>.
+    - Change the file name to `.env` and press <kbd>Enter</kbd>.
+
+3. Paste the **Project connection string** you copied from Azure AI Foundry into the `.env` file.
+
+    ```python
+    PROJECT_CONNECTION_STRING="<your_project_connection_string>"
+    ```
+
+    Your `.env` file should look similar to this but with your project connection string.
+
+    ```python
+    MODEL_DEPLOYMENT_NAME="gpt-4o"
+    BING_CONNECTION_NAME="Grounding-with-Bing-Search"
+    PROJECT_CONNECTION_STRING="<your_project_connection_string>"
+    ```
+
+4. Save the `.env` file.

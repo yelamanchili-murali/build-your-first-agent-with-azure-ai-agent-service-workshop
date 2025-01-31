@@ -1,10 +1,12 @@
 site_name: Build your first Agent
 
 nav:
-  - Workshop introduction: index.md
+  - Agent Service Introduction: index.md
   - Solution Overview: architecture.md
   - Security considerations: security.md
-  - Lab Introduction: lab_introduction.md
+  - Workshop Introduction:
+    - AI Tour Attendees: introduction-ai-tour.md
+    - Self-Guided Learners: introduction-self-guided.md
   - Lab 1 Function Calling Power: lab-1-function_calling.md
   - Lab 2 Intro to the Code Interpreter: lab-2-code_interpreter.md
   - Lab 3 Grounding with Documents: lab-3-file_search.md
@@ -67,3 +69,7 @@ markdown_extensions:
 
 extra_css:
   - css/custom.css
+
+# mkdocs.yml
+extra_javascript:
+  - js/custom-nav.js
