@@ -1,17 +1,10 @@
----
-title: Lab 3 - Grounding with Documents
-next: deployment.md
----
-
-<!-- # Getting Started with the Workshop -->
-
-This workshop is designed to teach you about the Azure AI Agents Service and the Python SDK. It consists of multiple labs, each highlighting a specific feature of the Azure AI Agents Service. The labs are meant to be completed in order, as each one builds on the knowledge and work from the previous lab.
-
-## AI Tour Lab Environment
-
 The instructions for this workshop assume you are participating in the AI Tour and have access to a pre-configured lab environment. This environment contains all the tools and resources needed to complete the workshop. 
 
 If you are not part of the AI Tour, please refer to the [Self-guided learners introduction](./introduction-self-guided.md) to set up your environment and begin the workshop.
+
+## Introduction
+
+This workshop is designed to teach you about the Azure AI Agents Service and the Python SDK. It consists of multiple labs, each highlighting a specific feature of the Azure AI Agents Service. The labs are meant to be completed in order, as each one builds on the knowledge and work from the previous lab.
 
 ## Lab Structure
 
