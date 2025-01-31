@@ -8,6 +8,7 @@ RG_LOCATION="westus"
 MODEL_NAME="gpt-4o"
 AI_HUB_NAME="agent-wksp"
 AI_PROJECT_NAME="agent-workshop"
+AI_PROJECT_FRIENDLY_NAME="Agent Service Workshop"
 STORAGE_NAME="agentservicestorage"
 AI_SERVICES_NAME="agent-workshop"
 MODEL_CAPACITY=140
@@ -24,6 +25,7 @@ az deployment group create \
   --template-file main.bicep \
   --parameters aiHubName="$AI_HUB_NAME" \
       aiProjectName="$AI_PROJECT_NAME" \
+      aiProjectFriendlyName="$AI_PROJECT_FRIENDLY_NAME" \
       storageName="$STORAGE_NAME" \
       aiServicesName="$AI_SERVICES_NAME" \
       modelName="$MODEL_NAME" \
@@ -68,9 +70,9 @@ else
   echo "Error: output.json not found."
 fi
 
-Set Variables
-subId = $(az account show --query id --output tsv)
-objectId = $(az ad signed-in-user show --query id -o tsv)
+# Set Variables
+subId=$(az account show --query id --output tsv)
+objectId=$(az ad signed-in-user show --query id -o tsv)
 
 #Adding data scientist role
-az role assignment create --role "f6c7c914-8db3-469d-8ca1-694a8f32e121" --assignee-object-id $objectId --scope /subscriptions/$subId/resourceGroups/"rg-agent-workshop" --assignee-principal-type 'User'
+az role assignment create --role "f6c7c914-8db3-469d-8ca1-694a8f32e121" --assignee-object-id $objectId --scope /subscriptions/$subId/resourceGroups/$RG_NAME --assignee-principal-type 'User'
