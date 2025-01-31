@@ -70,7 +70,7 @@ Follow these steps to open the workshop in Visual Studio Code:
 1. From the terminal window, execute the following commands to clone the workshop repository, navigate to the relevant folder, set up a virtual environment, activate it, and install the required packages:
 
     ```powershell
-    git clone https://github.com/gloveboxes/build-your-first-agent-with-azure-ai-agent-service-lab.git `
+    git clone https://github.com/microsoft/build-your-first-agent-with-azure-ai-agent-service-workshop.git `
     ; cd build-your-first-agent-with-azure-ai-agent-service-lab/src/workshop `
     ; python -m venv .venv `
     ; .\.venv\Scripts\activate `
