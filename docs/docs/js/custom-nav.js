@@ -7,8 +7,8 @@ function updateNextNavLink() {
     if (currentPage === 'introduction-ai-tour') {
         const nextLink = document.querySelector('a.md-footer__link--next'); // More specific selector
         if (nextLink) {
-            const baseUrl = window.location.origin; // Get the base URL (e.g., http://127.0.0.1:8000)
-            nextLink.href = `lab-1-function_calling`;
+            const basePath = window.location.pathname.split('/').slice(0, -2).join('/');
+            nextLink.href = `${window.location.origin}${basePath}/lab-1-function_calling`;
             nextLink.querySelector('.md-footer__title .md-ellipsis').textContent = 'Lab 1 Function Calling Power';
             // console.log('Next link updated to:', nextLink.href);
         }
