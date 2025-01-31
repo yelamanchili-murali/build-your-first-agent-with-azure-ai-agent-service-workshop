@@ -14,7 +14,7 @@ nav:
   - Lab 5 Instrumentation: lab-5-instrumentation.md
   - Summary: summary.md
   - Resources: resources.md
-  - Deployment: deployment.md
+  # - Deployment: deployment.md
   # - Troubleshooting: troubleshooting.md
 
 
