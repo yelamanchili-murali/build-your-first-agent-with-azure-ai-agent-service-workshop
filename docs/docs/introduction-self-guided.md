@@ -62,6 +62,12 @@ You need to authenticate with Azure so the agent app can access the Azure AI Age
 
 ## Deploy the Azure Resources
 
+The following resources will be created in your Azure subscription:  
+
+- An **Azure AI Foundry hub** named **agent-wksp**
+- An **Azure AI Foundry project** named **Agent Service Workshop** 
+- A **Serverless (pay-as-you-go) GPT-4o model deployment** named **gpt-4o (Global 2024-08-06)**. See pricing details [here](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/){:target="_blank"}.
+
 From the VS Code terminal run the following command:
 
 ```bash
