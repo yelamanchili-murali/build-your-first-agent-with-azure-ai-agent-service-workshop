@@ -72,7 +72,7 @@ Follow these steps to open the workshop in Visual Studio Code:
 
     ```powershell
     git clone https://github.com/microsoft/build-your-first-agent-with-azure-ai-agent-service-workshop.git `
-    ; cd build-your-first-agent-with-azure-ai-agent-service-lab/src/workshop `
+    ; cd build-your-first-agent-with-azure-ai-agent-service-workshop `
     ; python -m venv .venv `
     ; .\.venv\Scripts\activate `
     ; pip install -r requirements.txt `
