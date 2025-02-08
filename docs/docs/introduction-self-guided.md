@@ -68,11 +68,30 @@ The following resources will be created in your Azure subscription:
 - An **Azure AI Foundry project** named **Agent Service Workshop** 
 - A **Serverless (pay-as-you-go) GPT-4o model deployment** named **gpt-4o (Global 2024-08-06)**. See pricing details [here](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/){:target="_blank"}.
 
+!!! info "You will need 140K TPM quota availability in the `westus` region for the gpt-4o Global Standard SKU. Review your quota availability in the [AI Foundry Management Center](https://ai.azure.com/managementCenter/quota). You can change the requested region and TPM limit by modifying the environment variables in the file `infra/deploy.sh`."
+
 From the VS Code terminal run the following command:
 
 ```bash
 cd infra && ./deploy.sh
 ```
+
+### Manual Deployment
+
+If you prefer not to use the `deploy.sh` script, you can deploy the resources manually using the Azure AI Foundry studio as follows:
+
+1. Visit `ai.azure.com` and sign into your account
+2. Click "+ Create project"
+    - Project name: agent-workshop
+    - Hub: Create new hub, name: agent-workshop-hub
+3. In "My assets", click "Models + endpoints"
+4. Click Deploy Model / Deplot Base Model, select gpt-4o, click Confirm
+   - Deployment name: gpt-4o
+   - Deployment type: Global Standard
+   - Click Customize
+   - Tokens Per Minute Rate Limit: 10k
+   - Click deploy
+   
 
 <!-- ## Project Connection String
 
@@ -91,7 +110,7 @@ Next, we log in to Azure AI Foundry to retrieve the project connection string, w
 
     ![Copy connection string](./media/project-connection-string.png){:width="500"} -->
 
-## Workshop Configuration
+## Workshop Configuration File
 
 The deploy script generates the **src/workshop/.env** file, which contains the project connection string, model deployment name, and Bing connection name.
 
@@ -102,3 +121,12 @@ MODEL_DEPLOYMENT_NAME="gpt-4o"
 BING_CONNECTION_NAME="Grounding-with-Bing-Search"
 PROJECT_CONNECTION_STRING="<your_project_connection_string>"
 ```
+
+If you deployed your resources using the manual process and not the `deploy.sh` script, first create the file using the command below:
+
+```
+cp src/workshop/.env.sample src/workshop/.env
+```
+
+Then edit it `src/workshop/.env` to provide the Project Connection String. You can find this in the AI Foundry studio in the Overview page for your Project `agent-project` (look in in the Project details section). 
+
