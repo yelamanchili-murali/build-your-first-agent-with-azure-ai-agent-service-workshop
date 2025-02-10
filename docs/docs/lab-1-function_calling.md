@@ -40,6 +40,7 @@ In this lab, you'll enable the function logic to execute dynamic SQL queries aga
 
     ```python
     # INSTRUCTIONS_FILE = "instructions/instructions_function_calling.txt"
+
     # toolset.add(functions)
     ```
 
