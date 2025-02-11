@@ -87,21 +87,22 @@ If you prefer not to use the `deploy.sh` script, you can deploy the resources ma
     - Click Create and wait for the project to be created
 3. In "My assets", click "Models + endpoints"
 4. Click Deploy Model / Deploy Base Model
-   - select gpt-4o, click Confirm
-   - Deployment name: gpt-4o
-   - Deployment type: Global Standard
-   - Click Customize
-   - Tokens Per Minute Rate Limit: 10k
-   - Click deploy
+    - select gpt-4o, click Confirm
+    - Deployment name: gpt-4o
+    - Deployment type: Global Standard
+    - Click Customize
+    - Tokens Per Minute Rate Limit: 10k
+    - Click deploy
 
-NOTE: A specific version of GPT-4o may be required depending on your the region where you deployed your project.
-See [Models: Assistants (Preview)](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#assistants-preview) for details. 
+!!! note 
+    A specific version of GPT-4o may be required depending on your the region where you deployed your project.
+    See [Models: Assistants (Preview)](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#assistants-preview) for details.
 
 5. Click Models+Endpoints
-   - Click to select the `gpt-4o` model (a blue checkbox will appear left of its name)
-   - Click "Edit" in the header
-   - Under "Model Version" select "2024-08-06"
-   - Click Save and Close
+    - Click to select the `gpt-4o` model (a blue checkbox will appear left of its name)
+    - Click "Edit" in the header
+    - Under "Model Version" select "2024-08-06"
+    - Click Save and Close
 
 <!-- ## Project Connection String
 
