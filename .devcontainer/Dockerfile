@@ -8,7 +8,7 @@ COPY ../src/workshop/requirements.txt .
 RUN pip install -r requirements.txt
 
 # Install the packages required to build the instructions as a presenter
-COPY ../docs/docs/requirements.txt .
+COPY ../docs/requirements.txt .
 RUN pip install -r requirements.txt
 
 ENV ENVIRONMENT=container
