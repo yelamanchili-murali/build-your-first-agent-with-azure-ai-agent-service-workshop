@@ -12,6 +12,8 @@ You'll need to create a **Grounding with Bing Search Service** resource in the A
 
 Follow these steps to create a Grounding with Bing Search Resource:
 
+1. Make sure your app is still running. If it's not, open the `main.py` file and press <kbd>F5</kbd> to run the app.
+
 1. In your browser, navigate to the [Azure AI Foundry](https://ai.azure.com) studio.
 
     !!! note
@@ -52,10 +54,12 @@ For more information, visit the [Grounding with Bing Search](https://learn.micro
 
 4. On the next screen, your `grounding-with-bing-search` resource will be shown.
 
-     - Click "Create connection"
+     - Click "Add connection"
      - Click "Connect"
 
 ### Enable Grounding with Bing Search in the Agent App
+
+1. Stop your running app: type **exit**, or press <kbd>Shift</kbd>+<kbd>F5</kbd> to stop the agent app
 
 1. Open the file `main.py`.
 
@@ -110,7 +114,13 @@ For more information, visit the [Grounding with Bing Search](https://learn.micro
 
 ### Review the Instructions
 
-The **instructions/instructions_bing_grounding.txt** file provides guidance on how the LLM should use Bing search for grounding purposes. It ensures that queries remain relevant to Contoso and maintain a focus on contextually appropriate searches.
+The **instructions/instructions_bing_grounding.txt** adds a new tool, "Competitive Insights for Products and Categories" that instructs the agent to use Bing Search to:
+
+- Gather competitive product names, company names, and prices
+- Never answer questions that are not related to outdoors camping and sports gear
+- Make sure the search results are concise and directly relevant to the query
+
+This ensures that queries remain relevant to Contoso and maintain a focus on contextually appropriate searches.
 
 ### Run the Agent App
 

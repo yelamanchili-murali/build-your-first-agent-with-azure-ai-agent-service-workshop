@@ -10,7 +10,7 @@ A [vector store](https://en.wikipedia.org/wiki/Vector_database){:target="_blank"
 
 ## Lab Exercise
 
-1. Open the **datasheet/contoso-tents-datasheet.pdf** file from VS Code.
+1. Open the **src/workshop/datasheet/contoso-tents-datasheet.pdf** file from VS Code.
 
 2. **Review** the file’s contents to understand the information it contains, as this will be used to ground the agent’s responses.
 
@@ -76,8 +76,7 @@ A [vector store](https://en.wikipedia.org/wiki/Vector_database){:target="_blank"
 
 The **instructions/instructions_file_search.txt** file provides guidance on how the LLM should use File Search for grounding purposes.
 
-!!! info
-    The instructions direct the agent to search the "Contoso Product Information Vector Store" for additional Contoso product information. This vector store is specified in the `vector_store` function in `main.py`.
+We have added a new tool to the instructions for the agent. This tool directs the agent to search the "Contoso Product Information Vector Store" for additional Contoso product information. This vector store is specified in a call to the `FileSearchTool` SDK function in `main.py`.
 
 ### Run the Agent App
 
@@ -108,18 +107,18 @@ The following conversation uses data from both the Contoso sales database and th
 
     The agent provides a list of product types and categories associated with the tent brands.
 
-4. **What were the sales of alpine gear in 2024 by region?**
+4. **What were the sales of AlpineGear in 2024 by region?**
 
     The agent responds with sales data from the Contoso sales database.
 
     !!! note
-        The agent interprets this as a request to find all sales of backpacking tents, since it
+        The agent interprets this as a request to find all sales of tents in the "CAMPING & HIKING' category, since it
         now has access to information that Alpine Gear is a brand of backpacking tent. 
 
 5. **Show as a table and include the brand names**
 
     The agent responds with a table of sales data from the Contoso sales database, including the brand names.
 
-## Stop the Agent App
+## Don't Stop the Agent App Just Yet
 
-When you're done, type **exit**, or press <kbd>Shift</kbd>+<kbd>F5</kbd> to stop the agent app.
+Keep your agent running as we progress to the next lab. 

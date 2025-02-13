@@ -8,6 +8,15 @@ Imagine you are a sales manager at Contoso, a multinational retail company that 
 
 By the end of this workshop, you will learn to build an agent app using Azure AI Agent Service, explore its tools, and effectively use instructions to guide the LLM.
 
-## Documentation
+## Workshop Guide
 
-See the full documentation at [Contoso Sales AI Agent](https://aka.ms/agent-service-workshop-docs)
+To get started with this workshop, open the current Workshop Guide at [Contoso Sales AI Agent](https://aka.ms/agent-service-workshop-docs).
+
+### Modifying this workshop
+
+This workshop is open-source under the terms if its [LICENSE](LICENSE). If you are working from a modified version of this workshop you can launch the modified workshop guide from the command line with:
+```
+cd docs
+mkdocs serve
+```
+

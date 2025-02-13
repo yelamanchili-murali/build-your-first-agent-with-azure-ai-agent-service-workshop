@@ -1,6 +1,6 @@
 # Solution Architecture
 
-In this workshop, you will create the Contoso Sales Assistant: a conversational agent designed answer questions about sales data, generate charts, and create Excel files for further analysis.
+In this workshop, you will create the Contoso Sales Assistant: a conversational agent designed answer questions about sales data, generate charts, and download data files for further analysis.
 
 ## Components of the agent
 
@@ -15,11 +15,11 @@ The app is built in Python using the [Azure AI Agents Service](https://learn.mic
 
 ### Database
 
-The app is informed by the Contoso Sales Database, a SQLite database containing 40,000 rows of synthetic data. Upon startup, the app reads the sales database schema, product categories, product types, and reporting years, then incorporates this data into the Azure AI Agent Service’s instruction context.
+The app is informed by the Contoso Sales Database, a [SQLite database](https://www.sqlite.org/) containing 40,000 rows of synthetic data. Upon startup, the app reads the sales database schema, product categories, product types, and reporting years, then incorporates this data into the Azure AI Agent Service’s instruction context.
 
 ### Vector Store
 
-TODO: Info about the vector store goes here.
+We will provide the agent with product information as a PDF file to support its queries. The agent will use the "basic agent setup" of the [Azure AI Agent Service file search tool](https://learn.microsoft.com/en-us/azure/ai-services/agents/how-to/tools/file-search?tabs=python&pivots=overview) to find relevant portions of the document with vector search and provide them to the agent as contecxt.
 
 ### Control Plane
 

@@ -58,7 +58,13 @@ In this lab, you'll enable the Code Interpreter to execute Python code generated
 
 ### Review the Instructions
 
-Review the **instructions/instructions_code_interpreter.txt** file. This file provides the LLM with specific instructions on how to utilize the Code Interpreter in the **Tools** section.
+Review the **src/workshop/instructions/instructions_code_interpreter.txt** file. This replaces and adds to the instructions we used in the previous lab.
+
+In the **Tools** section we have added a new "Visualization and Code Interpretation" tool that instructs the agent to:
+
+- Use the code interpreter to write programs, e.g. to download or visualize data 
+- Visualize data using chats and graphs, and follow the user's language for labels, titles and other text in charts
+- Save visualizations as PNG files, and data as CSV files
 
 ### Run the Agent App
 
@@ -71,7 +77,7 @@ Try these questions:
 
 1. **Show sales by region as a pie chart**
 
-    Once the task is complete, the pie chart image will be saved in the **files** folder. Open the folder in VS Code and click on the image file to view it.
+    Once the task is complete, the pie chart image will be saved in the **files** folder. Open the folder in VS Code and click on the image file to view it. (Tip: in Codespaces, you can Control-Click the link that the agent outputs in its response to view the file.)
 
     !!! info
         This might feel like magic, so what’s happening behind the scenes to make it all work?

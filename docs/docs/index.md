@@ -1,10 +1,12 @@
 # Build your first agent with Azure AI Agent Service
 
+## A 75-minute interactive workshop
+
 Imagine you are a sales manager at Contoso, a multinational retail company that sells outdoor equipment. You need to analyze sales data to find trends, understand customer preferences, and make informed business decisions. To help you, Contoso has developed a conversational agent that can answer questions about your sales data.
 
 ![Contoso Sales Analysis Agent](media/persona.png)
 
-## What is an LLM-Powered AI Agent
+## What is an LLM-Powered AI Agent?
 
 An AI Agent is semi-autonomous software designed to achieve a given goal without requiring predefined steps or processes. Instead of following explicitly programmed instructions, the agent determines how to accomplish the task dynamically.
 
@@ -12,7 +14,7 @@ For example, if a user asks, "**Show the total sales by region as a pie chart**"
 
 Unlike traditional applications, where developers define the logic and workflows to support business processes, AI Agents shift this responsibility to the LLM. In these systems, prompt engineering, clear instructions, and tool development are critical to ensuring the app performs as intended.
 
-## What is the Azure AI Agent Service
+## What is the Azure AI Agent Service?
 
 The Azure AI Agent Service, now in public preview, offers a fully managed cloud service with SDKs for [Python](https://learn.microsoft.com/azure/ai-services/agents/quickstart?pivots=programming-language-python-azure){:target="_blank"} and [C#](https://learn.microsoft.com/azure/ai-services/agents/quickstart?pivots=programming-language-csharp){:target="_blank"}. It simplifies AI agent development, reducing complex tasks like function calling to just a few lines of code.
 

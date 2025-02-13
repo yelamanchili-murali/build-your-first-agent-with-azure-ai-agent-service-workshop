@@ -1,3 +1,5 @@
+# Setup: Self-Guided Learners
+
 These instructions are for self-guided learners who are not part of the AI Tour and do not have access to a pre-configured lab environment. Follow these steps to set up your environment and begin the workshop.
 
 ## Introduction
@@ -32,9 +34,9 @@ The workshop’s source code is located in the **src/workshop** folder. Be sure 
 
 1. The **files folder**: Contains the files created by the agent app.
 1. The **instructions folder**: Contains the instructions passed to the LLM.
-1. The **main.py**: The entry point for the app, containing its main logic.
-1. The **sales_data.py**: Contains the function logic to execute dynamic SQL queries against the SQLite database.
-1. The **stream_event_handler.py**: Contains the event handler logic for token streaming.
+1. The **main.py** Python script: The entry point for the app, containing its main logic.
+1. The **sales_data.py** Python script: Contains the function logic to execute dynamic SQL queries against the SQLite database.
+1. The **stream_event_handler.py** Python script: Contains the event handler logic for token streaming.
 
 ![Lab folder structure](./media/project-structure-self-guided.png)
 
@@ -68,7 +70,7 @@ The following resources will be created the `rg-contoso-agent-workshop` resource
 - An **Azure AI Foundry project** named **Agent Service Workshop** 
 - A **Serverless (pay-as-you-go) GPT-4o model deployment** named **gpt-4o (Global 2024-08-06)**. See pricing details [here](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/){:target="_blank"}.
 
-!!! info "You will need 140K TPM quota availability in the `westus` region for the gpt-4o Global Standard SKU. Review your quota availability in the [AI Foundry Management Center](https://ai.azure.com/managementCenter/quota). You can change the requested region and TPM limit by modifying the environment variables in the file `infra/deploy.sh`."
+!!! warning "You will need 30K TPM quota availability in the `eastus2` region for the gpt-4o Global Standard SKU. Review your quota availability in the [AI Foundry Management Center](https://ai.azure.com/managementCenter/quota). You can change the requested region and TPM limit by modifying the environment variables in the file `infra/deploy.sh`."
 
 From the VS Code terminal run the following command:
 
@@ -88,9 +90,11 @@ BING_CONNECTION_NAME="Grounding-with-Bing-Search"
 PROJECT_CONNECTION_STRING="<your_project_connection_string>"
 ```
 
-## Manual Deployment
+## (optional) Manual Deployment
 
-If you prefer not to use the `deploy.sh` script, you can deploy the resources manually using the Azure AI Foundry studio as follows:
+If you have already completed the prior step and the `deploy.sh` script completed successfully, you can skip to the next section.
+
+Alternatively, if you prefer not to use the `deploy.sh` script you can deploy the resources manually using the Azure AI Foundry studio as follows:
 
 1. Visit `ai.azure.com` and sign into your account
 2. Click "+ Create project"
@@ -103,7 +107,7 @@ If you prefer not to use the `deploy.sh` script, you can deploy the resources ma
     - Deployment name: gpt-4o
     - Deployment type: Global Standard
     - Click Customize
-    - Tokens Per Minute Rate Limit: 10k
+    - Tokens Per Minute Rate Limit: 30k
     - Click deploy
 
 !!! note 
