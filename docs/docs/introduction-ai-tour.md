@@ -1,6 +1,6 @@
-The instructions for this workshop assume you are participating in the AI Tour and have access to a pre-configured lab environment. This environment contains all the tools and resources needed to complete the workshop. 
+The instructions for this workshop assume you are participating in the AI Tour and have access to a pre-configured lab environment. This environment provides an Azure subscription with all the tools and resources needed to complete the workshop. 
 
-If you are not part of the AI Tour, please refer to the [Self-guided learners introduction](./introduction-self-guided.md) to set up your environment and begin the workshop.
+If you are **not** part of the AI Tour, you can run this workshop using your own Azure subscription. In that case, refer to the [Self-guided Learners Introduction](./introduction-self-guided.md) to set up your environment and begin the workshop.
 
 ## Introduction
 

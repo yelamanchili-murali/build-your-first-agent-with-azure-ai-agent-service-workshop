@@ -62,7 +62,7 @@ You need to authenticate with Azure so the agent app can access the Azure AI Age
 
 ## Deploy the Azure Resources
 
-The following resources will be created in your Azure subscription:  
+The following resources will be created the `rg-contoso-agent-workshop` resource group in your Azure subscription:  
 
 - An **Azure AI Foundry hub** named **agent-wksp**
 - An **Azure AI Foundry project** named **Agent Service Workshop** 

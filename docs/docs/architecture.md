@@ -1,16 +1,36 @@
-# Solution Overview
+# Solution Architecture
 
-The Contoso Sales Assistant is a conversational agent designed to answer questions about sales data, generate charts, and create Excel files for further analysis.
+In this workshop, you will create the Contoso Sales Assistant: a conversational agent designed answer questions about sales data, generate charts, and create Excel files for further analysis.
 
-The app is built using the [Azure AI Agents Service](https://learn.microsoft.com/azure/ai-services/agents/){:target="_blank"} and leverages the [Azure OpenAI gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions){:target="_blank"} LLM.
+## Components of the agent
 
-It utilizes a read-only SQLite Contoso Sales Database containing 40,000 rows of synthetic data. Upon startup, the app reads the sales database schema, product categories, product types, and reporting years, then incorporates this data into the Azure AI Agent Service’s instruction context.
+### Generative AI model
+ The underlying Large Language Model (LLM) powering this app is the [Azure OpenAI gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions){:target="_blank"} large language model (LLM). 
+
+
+### Software Development Kit (SDK)
+
+The app is built in Python using the [Azure AI Agents Service](https://learn.microsoft.com/azure/ai-services/agents/){:target="_blank"} SDK. This SDK makes use of the [Code Interpreter](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/code-interpreter?tabs=python) and [Function Calling](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/assistant-functions?tabs=python) features of the gpt-4o LLM.
+
+
+### Database
+
+The app is informed by the Contoso Sales Database, a SQLite database containing 40,000 rows of synthetic data. Upon startup, the app reads the sales database schema, product categories, product types, and reporting years, then incorporates this data into the Azure AI Agent Service’s instruction context.
+
+### Vector Store
+
+TODO: Info about the vector store goes here.
+
+### Control Plane
+
+The app is and its architectural components are managed and monitored using the [Azure AI Foundry](https://ai.azure.com) studio.
 
 ## Extending the Workshop Solution
 
-The workshop solution is highly adaptable to various scenarios, such as customer support, by modifying the database and tailoring the Azure AI Agent Service instructions to suit specific use cases. It is intentionally designed to be UX-agnostic, allowing you to focus on the core functionality of the AI Agent Service and apply the foundational concepts to build your own conversational agent.
+The workshop solution is highly adaptable to various scenarios, such as customer support, by modifying the database and tailoring the Azure AI Agent Service instructions to suit specific use cases. It is intentionally designed to be interface-agnostic, allowing you to focus on the core functionality of the AI Agent Service and apply the foundational concepts to build your own conversational agent.
 
-### Best Practices Demonstrated in the App
+
+## Best Practices Demonstrated in the App
 
 - **Asynchronous APIs**:
   In the workshop sample, both the Azure AI Agent Service and SQLite use asynchronous APIs, optimizing resource efficiency and scalability. This design choice becomes especially advantageous when deploying the application with asynchronous web frameworks like FastAPI, Chainlit, or Streamlit.
