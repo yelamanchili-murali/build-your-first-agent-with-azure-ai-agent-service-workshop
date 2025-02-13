@@ -1,6 +1,6 @@
 ## Introduction
 
-The Azure AI Agent Service Code Interpreter enables the LLM to generate Python code for tasks such as creating charts or performing complex data analyses based on user queries. It leverages natural language processing (NLP), sales data from an SQLite database, and user prompts to automate code generation. The LLM-generated Python code executes within a secure sandbox environment, utilizing a restricted subset of Python to ensure safe and controlled execution.
+The Azure AI Agent Service Code Interpreter enables the LLM to generate Python code for tasks such as creating charts or performing complex data analyses based on user queries. It makes use of natural language processing (NLP), sales data from an SQLite database, and user prompts to automate code generation. The LLM-generated Python code executes within a secure sandbox environment, running on a restricted subset of Python to ensure safe and controlled execution.
 
 ## Lab Exercise
 
@@ -8,11 +8,12 @@ In this lab, you'll enable the Code Interpreter to execute Python code generated
 
 1. Open the `main.py`.
 
-1. **Uncomment** the following lines by removing the **"# "** characters
+1. Define a new instructions file for our agent: **uncomment** the following lines by removing the **"# "** characters
 
     ```python
     # INSTRUCTIONS_FILE = "instructions/instructions_code_interpreter.txt
     # code_interpreter = CodeInterpreterTool()
+
     # toolset.add(code_interpreter)
     ```
 
@@ -75,7 +76,7 @@ Try these questions:
     !!! info
         This might feel like magic, so what’s happening behind the scenes to make it all work?
 
-        The LLM orchestrates the following steps:
+        Azure AI Agent Service orchestrates the following steps:
 
         1. The LLM generates a SQL query to answer the user's question. In this example, the query is:
 
@@ -97,6 +98,10 @@ Try these questions:
 3. **Download as JSON**
 
     Once the task is complete, check the **files** folder to see the downloaded file.
+
+    !!! info
+        The agent inferred from the conversation which file you wanted to create, even though you
+        didn't explicitly specify it. 
 
 4. Continue asking questions about Contoso sales data to see the Code Interpreter in action.
 

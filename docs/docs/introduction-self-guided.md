@@ -76,7 +76,19 @@ From the VS Code terminal run the following command:
 cd infra && ./deploy.sh
 ```
 
-### Manual Deployment
+### Workshop Configuration File
+
+The deploy script generates the **src/workshop/.env** file, which contains the project connection string, model deployment name, and Bing connection name.
+
+Your **.env** file should look similar to this but with your project connection string.
+
+```python
+MODEL_DEPLOYMENT_NAME="gpt-4o"
+BING_CONNECTION_NAME="Grounding-with-Bing-Search"
+PROJECT_CONNECTION_STRING="<your_project_connection_string>"
+```
+
+## Manual Deployment
 
 If you prefer not to use the `deploy.sh` script, you can deploy the resources manually using the Azure AI Foundry studio as follows:
 
@@ -121,23 +133,13 @@ Next, we log in to Azure AI Foundry to retrieve the project connection string, w
 
     ![Copy connection string](./media/project-connection-string.png){:width="500"} -->
 
-## Workshop Configuration File
+### Workshop Configuration File
 
-The deploy script generates the **src/workshop/.env** file, which contains the project connection string, model deployment name, and Bing connection name.
-
-Your **.env** file should look similar to this but with your project connection string.
-
-```python
-MODEL_DEPLOYMENT_NAME="gpt-4o"
-BING_CONNECTION_NAME="Grounding-with-Bing-Search"
-PROJECT_CONNECTION_STRING="<your_project_connection_string>"
-```
-
-If you deployed your resources using the manual process and not the `deploy.sh` script, first create the file using the command below:
+Create the workshop configuration file with the following command:
 
 ```
 cp src/workshop/.env.sample src/workshop/.env
 ```
 
-Then edit the file `src/workshop/.env` to provide the Project Connection String. You can find this in the AI Foundry studio in the Overview page for your Project `agent-project` (look in in the Project details section). 
+Then edit the file `src/workshop/.env` to provide the Project Connection String. You can find this string in the AI Foundry studio in the Overview page for your Project `agent-project` (look in in the Project details section). 
 

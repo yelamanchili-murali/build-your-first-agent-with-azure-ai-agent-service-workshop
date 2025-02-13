@@ -11,14 +11,19 @@ A [vector store](https://en.wikipedia.org/wiki/Vector_database){:target="_blank"
 ## Lab Exercise
 
 1. Open the **datasheet/contoso-tents-datasheet.pdf** file from VS Code.
+
 2. **Review** the file’s contents to understand the information it contains, as this will be used to ground the agent’s responses.
 
-3. Open the `main.py`.
+    !!! info
+        The PDF file includes detailed product descriptions for the tents sold by Contoso.
+
+3. Open the file `main.py`.
 
 4. **Uncomment** the following lines by removing the **"# "** characters
 
     ```python
     # INSTRUCTIONS_FILE = "instructions/instructions_file_search.txt"
+    
     # vector_store = await utilities.create_vector_store(
     #     project_client,
     #     files=[TENTS_DATA_SHEET_FILE],
@@ -71,6 +76,9 @@ A [vector store](https://en.wikipedia.org/wiki/Vector_database){:target="_blank"
 
 The **instructions/instructions_file_search.txt** file provides guidance on how the LLM should use File Search for grounding purposes.
 
+!!! info
+    The instructions direct the agent to search the "Contoso Product Information Vector Store" for additional Contoso product information. This vector store is specified in the `vector_store` function in `main.py`.
+
 ### Run the Agent App
 
 1. Review the **create_vector_store** function in the **utilities.py** file. The create_vector_store function uploads the Tents Data Sheet and saves it in a vector store. To observe the vector store creation process, set a [breakpoint](https://code.visualstudio.com/Docs/editor/debugging){:target="_blank"} in the function.
@@ -81,22 +89,34 @@ The **instructions/instructions_file_search.txt** file provides guidance on how 
 
 The following conversation uses data from both the Contoso sales database and the uploaded Tents Data Sheet, so the results will vary depending on the query.
 
+1. **What brands of hiking shoes do we sell?**
+
+    !!! info
+        We haven't provided the agent with any files containing information about hiking shoes.
+        
+        In the first lab you may have noticed that the transaction history from the underlying database did not include any product brands or descriptions, either. 
+
 1. **What brands of tents do we sell?**
 
     The agent responds with a list of tent brands from the Tents Data Sheet.
 
     !!! note
-        In the first lab, you may have noticed that the transaction history did not include tent brands or descriptions. This is because the underlying database schema does not store brand or description data. However, if you check the tents data sheet, you’ll find that this information is included. The agent can now reference the data sheet to access details such as brand, description, product type, and category, and relate this data back to the Contoso sales database.
+        The agent can now reference the provided data sheet to access details such as brand, description, product type, and category, and relate this data back to the Contoso sales database.
 
-2. **What product type and categories are these brands associated with?**
+
+3. **What product type and categories are these brands associated with?**
 
     The agent provides a list of product types and categories associated with the tent brands.
 
-3. **What were the sales of alpine gear in 2024 by region?**
+4. **What were the sales of alpine gear in 2024 by region?**
 
     The agent responds with sales data from the Contoso sales database.
 
-4. **Show as a table and include the brand names**
+    !!! note
+        The agent interprets this as a request to find all sales of backpacking tents, since it
+        now has access to information that Alpine Gear is a brand of backpacking tent. 
+
+5. **Show as a table and include the brand names**
 
     The agent responds with a table of sales data from the Contoso sales database, including the brand names.
 

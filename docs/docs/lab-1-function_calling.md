@@ -142,7 +142,14 @@ Start asking questions about Contoso sales data. For example:
         The LLM will provide a list of starter questions that were defined in the instructions file.
         Try asking help in your language, for example `help in Hindi` or `help in Italian`.
 
-2. **What are the sales by region?**
+2. **Show the 3 most recent transactions**
+
+    !!! info
+        Here you can see the raw data stored in the SQLite database. Each record is a single
+        sales transaction for Contoso, with information about the product, product category, sale amount and region, date, and much more. 
+
+
+3. **What are the sales by region?**
 
     Here is an example of the LLM response to the **sales by region** query:
 
@@ -171,13 +178,24 @@ Start asking questions about Contoso sales data. For example:
         1. The LLM then asks the agent app to call the **async_fetch_sales_data_using_sqlite_query** function, which retrieves the required data from the SQLite database and returns it to the LLM.
         2. Using the retrieved data, the LLM generates a table in Markdown format and returns it to the user. If you check the instructions file, you'll notice that the default output format is Markdown.
 
-3. **Show the 3 most recent transactions**
+
+4. **Show sales by category in Europe**
 
     !!! info
-        This query is valuable for learning purposes because it provides insight into the structure of the underlying SQLite Contoso sales database.
 
-4. **Show sales by category for europe**
+        In this case, an even more complex SQL query is being run by the agent.
+
 5. **Breakout sales by footwear**
+
+    !!! info
+
+        Note how much interpetation the agent does here: determining what product types fit should be included in "footwear", and understanding the unclear term "breakout".
+
+6. **Show sales by region as a pie chart**
+
+    !!! info
+
+        Our agent can't create charts ... yet. We'll fix that in the next lab.
 
 ### Debug the App (Optional)
 
