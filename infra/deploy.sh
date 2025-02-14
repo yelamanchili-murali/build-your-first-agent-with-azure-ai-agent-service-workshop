@@ -4,14 +4,14 @@ echo "Deploying the Azure resources..."
 
 # Define resource group parameters
 RG_NAME="rg-contoso-agent-workshop"
-RG_LOCATION="westus"
+RG_LOCATION="eastus2"
 MODEL_NAME="gpt-4o"
 AI_HUB_NAME="agent-wksp"
 AI_PROJECT_NAME="agent-workshop"
-AI_PROJECT_FRIENDLY_NAME="Agent Service Workshop"
+AI_PROJECT_FRIENDLY_NAME="Agent-Service-Workshop"
 STORAGE_NAME="agentservicestorage"
 AI_SERVICES_NAME="agent-workshop"
-MODEL_CAPACITY=140
+MODEL_CAPACITY=30
 
 # Register the Bing Search resource provider
 az provider register --namespace 'Microsoft.Bing'
