@@ -4,7 +4,7 @@ These instructions are for self-guided learners who are not part of the AI Tour 
 
 ## Introduction
 
-This workshop is designed to teach you about the Azure AI Agents Service and the Python SDK. It consists of multiple labs, each highlighting a specific feature of the Azure AI Agents Service. The labs are meant to be completed in order, as each one builds on the knowledge and work from the previous lab.
+This workshop is designed to teach you about the Azure AI Agents Service and the [associated Python SDK](https://learn.microsoft.com/python/api/overview/azure/ai-projects-readme?context=%2Fazure%2Fai-services%2Fagents%2Fcontext%2Fcontext&view=azure-python-preview). It consists of multiple labs, each highlighting a specific feature of the Azure AI Agents Service. The labs are meant to be completed in order, as each one builds on the knowledge and work from the previous lab.
 
 ## Prerequisites
 
@@ -32,11 +32,13 @@ Each lab in this workshop includes:
 
 The workshop’s source code is located in the **src/workshop** folder. Be sure to familiarize yourself with the key **subfolders** and **files** you’ll be working with throughout the session.
 
-1. The **files folder**: Contains the files created by the agent app.
+1. The **files folder**: Contains the files created by the agent app. 
 1. The **instructions folder**: Contains the instructions passed to the LLM.
 1. The **main.py** Python script: The entry point for the app, containing its main logic.
 1. The **sales_data.py** Python script: Contains the function logic to execute dynamic SQL queries against the SQLite database.
 1. The **stream_event_handler.py** Python script: Contains the event handler logic for token streaming.
+
+!!! info "The `files/` folder is created during agent execution and is not checked into source control. As a result, you will NOT see this folder in your forked repository by default - but you will see it during runtime"
 
 ![Lab folder structure](./media/project-structure-self-guided.png)
 
@@ -94,7 +96,7 @@ PROJECT_CONNECTION_STRING="<your_project_connection_string>"
 
 If you have already completed the prior step and the `deploy.sh` script completed successfully, you can skip to the next section.
 
-Alternatively, if you prefer not to use the `deploy.sh` script you can deploy the resources manually using the Azure AI Foundry studio as follows:
+Alternatively, if you prefer not to use the `deploy.sh` script you can deploy the resources manually using the Azure AI Foundry portal as follows:
 
 1. Visit `ai.azure.com` and sign into your account
 2. Click "+ Create project"
@@ -145,5 +147,5 @@ Create the workshop configuration file with the following command:
 cp src/workshop/.env.sample src/workshop/.env
 ```
 
-Then edit the file `src/workshop/.env` to provide the Project Connection String. You can find this string in the AI Foundry studio in the Overview page for your Project `agent-project` (look in in the Project details section). 
+Then edit the file `src/workshop/.env` to provide the Project Connection String. You can find this string in the AI Foundry portal in the Overview page for your Project `agent-project` (look in in the Project details section). 
 

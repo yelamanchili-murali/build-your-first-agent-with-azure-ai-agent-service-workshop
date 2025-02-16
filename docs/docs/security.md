@@ -12,6 +12,6 @@ In enterprise scenarios, data is typically extracted and transformed from operat
 
 ## Sandboxing
 
-This app will use [Azure OpenAI Assistants Code Interpreter](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/code-interpreter?tabs=python) to create and run code on demand. The code is run in a sandboxed execution environment to prevent the code taking actions that are beyond the scope of the agent. 
+This app will use [Azure AI Agents Service Code Interpreter](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/code-interpreter?view=azure-python-preview&tabs=python&pivots=overview) to create and run code on demand. The code is run in a sandboxed execution environment to prevent the code taking actions that are beyond the scope of the agent. 
 
 
