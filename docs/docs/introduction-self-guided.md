@@ -72,7 +72,7 @@ The following resources will be created the `rg-contoso-agent-workshop` resource
 - An **Azure AI Foundry project** named **Agent Service Workshop** 
 - A **Serverless (pay-as-you-go) GPT-4o model deployment** named **gpt-4o (Global 2024-08-06)**. See pricing details [here](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/){:target="_blank"}.
 
-!!! warning "You will need 30K TPM quota availability in the `eastus2` region for the gpt-4o Global Standard SKU. Review your quota availability in the [AI Foundry Management Center](https://ai.azure.com/managementCenter/quota). You can change the requested region and TPM limit by modifying the environment variables in the file `infra/deploy.sh`."
+!!! warning "You will need 140K TPM quota availability in the `eastus2` region for the gpt-4o Global Standard SKU, not because the agent uses a lot of tokens, but because of the rate calls are made by the agent to the model. Review your quota availability in the [AI Foundry Management Center](https://ai.azure.com/managementCenter/quota)."
 
 From the VS Code terminal run the following command:
 
