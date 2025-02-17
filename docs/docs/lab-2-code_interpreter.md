@@ -77,7 +77,9 @@ Try these questions:
 
 1. **Show sales by region as a pie chart**
 
-    Once the task is complete, the pie chart image will be saved in the **files** folder. Open the folder in VS Code and click on the image file to view it. (Tip: in Codespaces, you can Control-Click the link that the agent outputs in its response to view the file.)
+    Once the task is complete, the pie chart image will be saved in the **files/** subfolder under `src/workshop`. Note that this subfolder is created the first time this task is run, and is never checked into source control.
+    
+    Open the folder in VS Code and click on the image file to view it. (Tip: in Codespaces, you can Control-Click the link that the agent outputs in its response to view the file.)
 
     !!! info
         This might feel like magic, so what’s happening behind the scenes to make it all work?

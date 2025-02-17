@@ -212,6 +212,8 @@ Start asking questions about Contoso sales data. For example:
 
 Set a [breakpoint](https://code.visualstudio.com/Docs/editor/debugging){:target="_blank"} in the `async_fetch_sales_data_using_sqlite_query` function located in `sales_data.py` to observe how the LLM requests data.
 
+!!! info "Note: To use the debug feature, exit the previous run. Then set the breakpoint. Then run the application using the debugger icon in the sidebar. This will open up the debug sidebar, allowing you to watch stack traces and step through execution."
+
 ![Breakpoint](./media/breakpoint.png){:width="600"}
 
 ### Ask More Questions
