@@ -11,7 +11,7 @@ AI_PROJECT_NAME="agent-workshop"
 AI_PROJECT_FRIENDLY_NAME="Agent-Service-Workshop"
 STORAGE_NAME="agentservicestorage"
 AI_SERVICES_NAME="agent-workshop"
-MODEL_CAPACITY=30
+MODEL_CAPACITY=140
 
 # Register the Bing Search resource provider
 az provider register --namespace 'Microsoft.Bing'
