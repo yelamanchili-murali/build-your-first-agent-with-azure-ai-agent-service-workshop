@@ -124,11 +124,18 @@ This ensures that queries remain relevant to Contoso and maintain a focus on con
 
 ### Run the Agent App
 
+First, launch the app from the terminal as before:
+
+1. Press <kbd>F5</kbd> to run the app.
+
 This time, let's run our completed app in the Agents Playground within Azure AI Foundry:
 
 1. In Azure AI Foundry, click "Agents" in the left hand nav
 2. Select "Contoso Sales Agent"
 3. In the right pane, click "Try in Playground".
+
+    !!! tip
+        You may need to click the "Refresh" button on the "Create and debug your agents" page if you already had it open.
 
 You will see a chat window with a field at the bottom where you can enter your queries.
 

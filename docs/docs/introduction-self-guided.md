@@ -74,7 +74,9 @@ The following resources will be created the `rg-contoso-agent-workshop` resource
 
 !!! warning "You will need 140K TPM quota availability in the `eastus2` region for the gpt-4o Global Standard SKU, not because the agent uses a lot of tokens, but because of the rate calls are made by the agent to the model. Review your quota availability in the [AI Foundry Management Center](https://ai.azure.com/managementCenter/quota)."
 
-From the VS Code terminal run the following command:
+We have provided a bash script to deploy the required resources. Alternatively, you may deploy resources manually using Azure AI Foundry studio -- see below for details.
+
+To run the script, open the VS Code terminal and run the following command:
 
 ```bash
 cd infra && ./deploy.sh
@@ -92,7 +94,7 @@ BING_CONNECTION_NAME="Grounding-with-Bing-Search"
 PROJECT_CONNECTION_STRING="<your_project_connection_string>"
 ```
 
-## (optional) Manual Deployment
+## (optional) Manual Deployment in AI Foundry studio
 
 If you have already completed the prior step and the `deploy.sh` script completed successfully, you can skip to the next section.
 
@@ -109,18 +111,13 @@ Alternatively, if you prefer not to use the `deploy.sh` script you can deploy th
     - Deployment name: gpt-4o
     - Deployment type: Global Standard
     - Click Customize
-    - Tokens Per Minute Rate Limit: 30k
+    - Model version: 2024-08-06
+    - Tokens Per Minute Rate Limit: 140k
     - Click deploy
 
 !!! note 
     A specific version of GPT-4o may be required depending on your the region where you deployed your project.
     See [Models: Assistants (Preview)](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#assistants-preview) for details.
-
-5. Click Models+Endpoints
-    - Click to select the `gpt-4o` model (a blue checkbox will appear left of its name)
-    - Click "Edit" in the header
-    - Under "Model Version" select "2024-08-06"
-    - Click Save and Close
 
 <!-- ## Project Connection String
 

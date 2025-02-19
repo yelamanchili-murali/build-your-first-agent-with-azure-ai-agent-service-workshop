@@ -12,8 +12,8 @@ In this lab, you'll enable the Code Interpreter to execute Python code generated
 
     ```python
     # INSTRUCTIONS_FILE = "instructions/instructions_code_interpreter.txt
-    # code_interpreter = CodeInterpreterTool()
 
+    # code_interpreter = CodeInterpreterTool()
     # toolset.add(code_interpreter)
     ```
 
