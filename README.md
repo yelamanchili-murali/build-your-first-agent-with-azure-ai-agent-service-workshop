@@ -22,7 +22,7 @@ To participate in this workshop you will need:
 
 1. Access to an Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/) before you begin.
 1. You need a GitHub account and GitHub Codespaces. If you don’t have a GitHub account, create one at [GitHub](https://github.com/join), and the free CodeSpaces benefit is sufficient to run this workshop.
-1. Sufficient credits and quota to deploy the Azure resources required for the duration of this workshop. Details are available in the "Solution Architecture" section of the Workshop Guide.
+1. Sufficient Azure credits and quota to deploy the Azure resources required for the duration of this workshop. You should require less than USD$1.00 in consumption for a typical run-though of this workshop. Details are available in the "Solution Architecture" section of the Workshop Guide.
 
 ## Important Security Notice 
 
