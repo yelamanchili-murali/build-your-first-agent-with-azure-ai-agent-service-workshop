@@ -2,9 +2,9 @@ site_name: Build your first Agent
 
 nav:
   - Agent Service Introduction: index.md
-  - Solution Overview: architecture.md
-  - Security considerations: security.md
-  - Workshop Introduction:
+  - Solution Architecture: architecture.md
+  - Security Considerations: security.md
+  - Workshop Setup:
     - AI Tour Attendees: introduction-ai-tour.md
     - Self-Guided Learners: introduction-self-guided.md
   - Lab 1 Function Calling Power: lab-1-function_calling.md

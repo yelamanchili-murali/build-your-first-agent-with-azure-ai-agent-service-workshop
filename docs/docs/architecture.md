@@ -4,6 +4,8 @@ In this workshop, you will create the Contoso Sales Assistant: a conversational 
 
 ## Components of the agent
 
+This agent is built on Microsoft Azure services. Your lab instructor may have provisioned these resources for you ahead of time. 
+
 ### Generative AI model
  The underlying Large Language Model (LLM) powering this app is the [Azure OpenAI gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#gpt-4o-and-gpt-4-turbo){:target="_blank"} large language model (LLM). 
 
@@ -11,7 +13,6 @@ In this workshop, you will create the Contoso Sales Assistant: a conversational 
 ### Software Development Kit (SDK)
 
 The app is built in Python using the [Azure AI Agents Service SDK](https://learn.microsoft.com/python/api/overview/azure/ai-projects-readme?view=azure-python-preview&context=%2Fazure%2Fai-services%2Fagents%2Fcontext%2Fcontext){:target="_blank"}. This SDK makes use of the [Code Interpreter](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/code-interpreter?view=azure-python-preview&tabs=python&pivots=overview) and [Function Calling](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/function-calling?view=azure-python-preview&tabs=python&pivots=overview) features of the Azure AI Agents service.
-
 
 ### Database
 

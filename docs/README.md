@@ -1,11 +1,16 @@
 # Contoso Sales Assistant
 
 The instructions for this workshop are published to GitHub Pages at
-[Contoso Sales Assistant Docs](https://azure-samples.github.io/contoso-sales-azure-openai-assistants-api/)
+[aka.ms/aitour/wrk552](https://aka.ms/aitour/wrk552). This folder `docs` contains the source code for those instructions.
 
 ## MKDocs
 
 These instructions are written using MKdocs, and mkdocs commands are installed in this dev container. For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+
+These instructions also make use of the following MKDocs extensions:
+
+* [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
+* [glightbox MKDocs plugin](https://blueswen.github.io/mkdocs-glightbox/)
 
 ## Deploy to GitHub pages
 
@@ -29,6 +34,3 @@ mkdocs gh-deploy
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 
-## Material docs
-
-[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)

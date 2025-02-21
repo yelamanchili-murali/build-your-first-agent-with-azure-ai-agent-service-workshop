@@ -66,17 +66,18 @@ You need to authenticate with Azure so the agent app can access the Azure AI Age
 
 ## Deploy the Azure Resources
 
-The following resources will be created the `rg-contoso-agent-workshop` resource group in your Azure subscription:  
+The following resources will be created the `rg-contoso-agent-workshop` resource group in your Azure subscription. You may deploy in any region where the services are available.
 
 - An **Azure AI Foundry hub** named **agent-wksp**
 - An **Azure AI Foundry project** named **Agent Service Workshop** 
 - A **Serverless (pay-as-you-go) GPT-4o model deployment** named **gpt-4o (Global 2024-08-06)**. See pricing details [here](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/){:target="_blank"}.
+- A **Grounding with Bing Search** resource. See the [documentation](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/bing-grounding) and [pricing](https://www.microsoft.com/en-us/bing/apis/grounding-pricing) for details.
 
-!!! warning "You will need 140K TPM quota availability in the `eastus2` region for the gpt-4o Global Standard SKU, not because the agent uses a lot of tokens, but because of the rate calls are made by the agent to the model. Review your quota availability in the [AI Foundry Management Center](https://ai.azure.com/managementCenter/quota)."
+!!! warning "You will need 140K TPM quota availability in for the gpt-4o Global Standard SKU, not because the agent uses a lot of tokens, but because of the rate calls are made by the agent to the model. Review your quota availability in the [AI Foundry Management Center](https://ai.azure.com/managementCenter/quota)."
 
 We have provided a bash script to deploy the required resources. Alternatively, you may deploy resources manually using Azure AI Foundry studio -- see below for details.
 
-To run the script, open the VS Code terminal and run the following command:
+The script `deploy.sh` deploys to the `eastus2` region by default; edit the file to change the region or resource names. To run the script, open the VS Code terminal and run the following command:
 
 ```bash
 cd infra && ./deploy.sh
