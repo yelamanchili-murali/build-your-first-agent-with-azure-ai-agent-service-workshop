@@ -66,7 +66,7 @@ You need to authenticate with Azure so the agent app can access the Azure AI Age
 
 ## Deploy the Azure Resources
 
-The following resources will be created the `rg-contoso-agent-workshop` resource group in your Azure subscription. You may deploy in any region where the services are available.
+The following resources will be created in the `rg-contoso-agent-workshop` resource group in your Azure subscription. You may deploy in any region where the services are available.
 
 - An **Azure AI Foundry hub** named **agent-wksp**
 - An **Azure AI Foundry project** named **Agent Service Workshop** 
@@ -91,7 +91,7 @@ Your **.env** file should look similar to this but with your project connection 
 
 ```python
 MODEL_DEPLOYMENT_NAME="gpt-4o"
-BING_CONNECTION_NAME="Grounding-with-Bing-Search"
+BING_CONNECTION_NAME="groundingwithbingsearch"
 PROJECT_CONNECTION_STRING="<your_project_connection_string>"
 ```
 
@@ -145,5 +145,5 @@ Create the workshop configuration file with the following command:
 cp src/workshop/.env.sample src/workshop/.env
 ```
 
-Then edit the file `src/workshop/.env` to provide the Project Connection String. You can find this string in the AI Foundry portal in the Overview page for your Project `agent-project` (look in in the Project details section). 
+Then edit the file `src/workshop/.env` to provide the Project Connection String. You can find this string in the AI Foundry portal in the Overview page for your Project `agent-project` (look in the Project details section).
 
