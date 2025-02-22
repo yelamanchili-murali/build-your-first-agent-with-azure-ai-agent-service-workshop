@@ -97,15 +97,19 @@ The following conversation uses data from both the Contoso sales database and th
 
 1. **What brands of tents do we sell?**
 
-    The agent responds with a list of tent brands from the Tents Data Sheet.
+    The agent responds with a list of distinct tent brands mentioned in the Tents Data Sheet.
 
     !!! note
         The agent can now reference the provided data sheet to access details such as brand, description, product type, and category, and relate this data back to the Contoso sales database.
 
-
 3. **What product type and categories are these brands associated with?**
 
     The agent provides a list of product types and categories associated with the tent brands.
+
+4. **What were the sales of tents in 2024 by product type? Include the brands associated with each.**
+
+It's possible the agent might get this wrong, and suggest incorrectly that AlpineGear has a Family Camping tent. To address this, you could provide further context in the instructions or the datasheet, or provide context to the agent directly as in next prompt.
+
 
 4. **What were the sales of AlpineGear in 2024 by region?**
 
@@ -115,10 +119,10 @@ The following conversation uses data from both the Contoso sales database and th
         The agent interprets this as a request to find all sales of tents in the "CAMPING & HIKING' category, since it
         now has access to information that Alpine Gear is a brand of backpacking tent. 
 
-5. **Show as a table and include the brand names**
+5. **Contoso does not sell Family Camping tents from AlpineGear. Try again.**
 
-    The agent responds with a table of sales data from the Contoso sales database, including the brand names.
+    That's better!
 
-## Don't Stop the Agent App Just Yet
+## Stop the Agent App
 
-Keep your agent running as we progress to the next lab. 
+When you're done, type **exit**, or press <kbd>Shift</kbd>+<kbd>F5</kbd> to stop the agent app.
