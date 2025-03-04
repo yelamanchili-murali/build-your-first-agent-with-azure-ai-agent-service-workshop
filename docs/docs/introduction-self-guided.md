@@ -66,17 +66,18 @@ You need to authenticate with Azure so the agent app can access the Azure AI Age
 
 ## Deploy the Azure Resources
 
-The following resources will be created the `rg-contoso-agent-workshop` resource group in your Azure subscription:  
+The following resources will be created in the `rg-contoso-agent-workshop` resource group in your Azure subscription. You may deploy in any region where the services are available.
 
 - An **Azure AI Foundry hub** named **agent-wksp**
 - An **Azure AI Foundry project** named **Agent Service Workshop** 
 - A **Serverless (pay-as-you-go) GPT-4o model deployment** named **gpt-4o (Global 2024-08-06)**. See pricing details [here](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/){:target="_blank"}.
+- A **Grounding with Bing Search** resource. See the [documentation](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/bing-grounding) and [pricing](https://www.microsoft.com/en-us/bing/apis/grounding-pricing) for details.
 
-!!! warning "You will need 140K TPM quota availability in the `eastus2` region for the gpt-4o Global Standard SKU, not because the agent uses a lot of tokens, but because of the rate calls are made by the agent to the model. Review your quota availability in the [AI Foundry Management Center](https://ai.azure.com/managementCenter/quota)."
+!!! warning "You will need 140K TPM quota availability in for the gpt-4o Global Standard SKU, not because the agent uses a lot of tokens, but because of the rate calls are made by the agent to the model. Review your quota availability in the [AI Foundry Management Center](https://ai.azure.com/managementCenter/quota)."
 
 We have provided a bash script to deploy the required resources. Alternatively, you may deploy resources manually using Azure AI Foundry studio -- see below for details.
 
-To run the script, open the VS Code terminal and run the following command:
+The script `deploy.sh` deploys to the `eastus2` region by default; edit the file to change the region or resource names. To run the script, open the VS Code terminal and run the following command:
 
 ```bash
 cd infra && ./deploy.sh
@@ -90,7 +91,7 @@ Your **.env** file should look similar to this but with your project connection 
 
 ```python
 MODEL_DEPLOYMENT_NAME="gpt-4o"
-BING_CONNECTION_NAME="Grounding-with-Bing-Search"
+BING_CONNECTION_NAME="groundingwithbingsearch"
 PROJECT_CONNECTION_STRING="<your_project_connection_string>"
 ```
 
@@ -144,5 +145,5 @@ Create the workshop configuration file with the following command:
 cp src/workshop/.env.sample src/workshop/.env
 ```
 
-Then edit the file `src/workshop/.env` to provide the Project Connection String. You can find this string in the AI Foundry portal in the Overview page for your Project `agent-project` (look in in the Project details section). 
+Then edit the file `src/workshop/.env` to provide the Project Connection String. You can find this string in the AI Foundry portal in the Overview page for your Project `agent-project` (look in the Project details section).
 

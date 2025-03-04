@@ -6,60 +6,51 @@ Grounding conversations with Bing is one of several tools provided by the Azure 
 
 In this lab, you'll enable Bing Grounding to provide competitive sales analysis of Contoso products and categories.
 
-### Grounding with Bing Search Service
+## Create a with Grounding with Bing Search resource
 
 You'll need to create a **Grounding with Bing Search Service** resource in the Azure portal and connect it to the Azure AI Foundry portal.
 
 Follow these steps to create a Grounding with Bing Search Resource:
 
-1. Make sure your app is still running. If it's not, open the `main.py` file and press <kbd>F5</kbd> to run the app.
+1. [Click to create a Grounding with Bing Search Resource](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/Microsoft.BingGroundingSearch){:target="_blank"}.
 
-1. In your browser, navigate to the [Azure AI Foundry](https://ai.azure.com) portal.
+    !!! Note
+        You may need to sign in to your Azure account and or clear the welcome screen to access the Azure portal.
 
-    !!! note
-        Check that you are signed in and your project name "agent-workshop" appears in the top right.
+1. Select **Create**.
+1. Select the **rg-agent-workshop** resource group from the drop-down list.
+1. Name the resource as follows:
 
-2. In AI Foundry, click Agents in the left nav, and then select "Contoso Sales AI Agent"
+    ```text
+    groundingwithbingsearch
+    ```
 
-    !!! note
-        Information about your agent appears in the right pane. 
+1. Select the **Grounding with Bing Search** pricing tier.
+1. Confirm **I confirm I have read and understood the notice above**.
+1. Select **Review + create**.
+1. Select **Create**.
+1. Wait for deployment to complete, then click **Go to resource**.
+1. Select **Overview** from the side-bar menu.
+1. Select the **Go to Azure AI Foundry Portal** button.
+<!-- 1. Select **Sign in** and enter your Azure account credentials. -->
 
-3. In the right pane next to "Knowledge (1)" click "+ Add". Then:
+## Create a Bing Search Connection in AI Foundry
 
-    - Click Grounding with Bing Search
-    - Click "+ Create Connection"
-    - Click "Create a new resource"
+Next, we will create a Bing Search connection in the Azure AI Foundry portal. This connection enables the agent app to access the Bing Search service using the agent **Grounding-with-Bing-Search**.
 
-4. Now, fill in these fields in the Azure Portal window that appears:
+To create a Bing Search connection in the Azure AI Foundry portal, follow these steps:
 
-    - Resource Group: Select the the resource group associated with your project from the drop-down list.(This can be found by clicking on your project name in the top right corner of AI Foundry.)
-    - Name: Enter `grounding-with-bing-search`
-    - Pricing Tier: Select the option "Groudning with Bing Search".
-    - I confirm I have read and understood the notice above: Click the checkbox to accept Terms.
-
-5. Click "Review + create", and then click Create.
+1. Verify that your project "Agent-Service-Workshop" is selected.
+1. From the sidebar menu, click the **Management Center** button. The button is pinned at the **bottom** of the sidebar.
+1. From the side-bar menu, select **Connected resources**.
+1. Click **+ New Connection**.
+1. Scroll to the Knowledge section and select "Grounding with Bing Search"
+1. Click the **Add connection** button to the right of your `groundingwithbingsearch` resource.
+1. Click **Close**
 
 For more information, visit the [Grounding with Bing Search](https://learn.microsoft.com/en-us/azure/ai-services/agents/how-to/tools/bing-grounding){:target="_blank"} documentation.
 
-### Connect the Grounding with Bing Search resource
-
-1. In your browser, return to the [Azure AI Foundry](https://ai.azure.com) portal.
-
-2. In AI Foundry, click Agents in the left nav, and then select "Contoso Sales AI Agent"
-
-3. In the right pane next to "Knowledge (1)" click "+ Add". Then:
-
-    - Click Grounding with Bing Search
-    - Click "+ Create Connection"
-
-4. On the next screen, your `grounding-with-bing-search` resource will be shown.
-
-     - Click "Add connection"
-     - Click "Connect"
-
 ### Enable Grounding with Bing Search in the Agent App
-
-1. Stop your running app: type **exit**, or press <kbd>Shift</kbd>+<kbd>F5</kbd> to stop the agent app
 
 1. Open the file `main.py`.
 
@@ -131,7 +122,8 @@ First, launch the app from the terminal as before:
 This time, let's run our completed app in the Agents Playground within Azure AI Foundry:
 
 1. In Azure AI Foundry, click "Agents" in the left hand nav
-2. Select "Contoso Sales Agent"
+1. Select your AI Foundtry project
+2. Select your agent: "Contoso Sales Agent"
 3. In the right pane, click "Try in Playground".
 
     !!! tip
@@ -148,7 +140,7 @@ The agent combines data from the Contoso sales database, the Tents Data Sheet, a
     !!! info
         This information mainly comes from the file we provided in the vector information store. 
 
-2. **What beginner tents do our competitors sell and include prices?**
+2. **What beginner tents do our competitors sell? Include prices.**
 
     !!! info
         This information comes from the internet, and includes real-world product names and prices.
@@ -164,7 +156,7 @@ The agent combines data from the Contoso sales database, the Tents Data Sheet, a
     !!! info
         This query relies on the reasoning capabilities of the underlying large language model, along with the data returned by function calling. 
 
-5. **Download the data**
+5. **Download the data as a human-readable JSON file**
 
     !!! info
         This query again relies on Code Interpreter to create the file from the context in the 
